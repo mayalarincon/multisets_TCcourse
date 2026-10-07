@@ -1,4 +1,4 @@
-# multisets
+# PVS Mechanization of the Noetherianity of multiset orderings
 
 This repository aims the formalization in the interactive theorem prover PVS of the theorem stating that multiset orderings induced from Noetherian orderings are also Noetherian.  The objective is obtaining proof as the one given in the seminal Dershowitz and Manna paper [Proving Termination with Multiset Orderings](https://dl.acm.org/doi/pdf/10.1145/359138.359142), further organized a nicely presented in Baader and Nipkow's [Term rewriting and All That](
 https://doi.org/10.1017/CBO9781139172752) book and also in Portuguese in the book [Fundamentos da Programação Lógica e Funcional: o princípio de resolução e a teoria de reescrita](https://loja.editora.unb.br/engenharia/fundamentos-da-programacao-logica-e-funcional--o-principio-de-resolucao-e-a-teoria-de-reescrita-742/p). 
