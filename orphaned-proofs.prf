@@ -1,0 +1,263 @@
+(("multisets_nat"
+  (|subset_ms_subset_dom_TCC1| 0
+   (|subset_ms_subset_dom_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL) NIL
+    NIL (|subset_ms_subset_dom| SUBTYPE "m" "finite_multiset")))
+  |subset_ms_subset_dom_TCC2-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL) NIL
+  NIL (|subset_ms_subset_dom| SUBTYPE "n" "finite_multiset"))
+ ("multisets_nat"
+  (|subset_ms_subset_dom_TCC1| 0
+   (|subset_ms_subset_dom_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL) NIL
+    NIL (|subset_ms_subset_dom| SUBTYPE "m" "finite_multiset")))
+  |subset_ms_subset_dom_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL) NIL
+  NIL (|subset_ms_subset_dom| SUBTYPE "m" "finite_multiset"))
+ ("multisets_nat"
+  (|subset_ms_subset_dom_TCC1| 0
+   (|subset_ms_subset_dom_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL) NIL
+    NIL (|subset_ms_subset_dom| SUBTYPE "m" "finite_multiset")))
+  . 0))(("multisets_nat"
+  (|subset_ms_subset_dom_TCC1| 0
+   (|subset_ms_subset_dom_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL) NIL
+    NIL (|subset_ms_subset_dom| SUBTYPE "m" "finite_multiset")))
+  |subset_ms_subset_dom_TCC2-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL) NIL
+  NIL (|subset_ms_subset_dom| SUBTYPE "n" "finite_multiset"))
+ ("multisets_nat"
+  (|subset_ms_subset_dom_TCC1| 0
+   (|subset_ms_subset_dom_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL) NIL
+    NIL (|subset_ms_subset_dom| SUBTYPE "m" "finite_multiset")))
+  |subset_ms_subset_dom_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL) NIL
+  NIL (|subset_ms_subset_dom| SUBTYPE "m" "finite_multiset"))
+ ("multisets_nat"
+  (|subset_ms_subset_dom_TCC1| 0
+   (|subset_ms_subset_dom_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL) NIL
+    NIL (|subset_ms_subset_dom| SUBTYPE "m" "finite_multiset")))
+  . 0))(("multisets_nat"
+  (|card_ms_one_char_TCC1| 0
+   (|card_ms_one_char_TCC1-1| NIL 3999605785 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+    (|card_ms_one_char| SUBTYPE "m" "finite_multiset")))
+  |card_ms_one_char_TCC1-1| NIL 3999605785 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+  (|card_ms_one_char| SUBTYPE "m" "finite_multiset"))
+ ("multisets_nat"
+  (|card_ms_one_char_TCC1| 0
+   (|card_ms_one_char_TCC1-1| NIL 3999605785 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+    (|card_ms_one_char| SUBTYPE "m" "finite_multiset")))
+  . 0))(("multisets_nat"
+  (|card_ms_one_char_TCC1| 0
+   (|card_ms_one_char_TCC1-1| NIL 3999605785 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+    (|card_ms_one_char| SUBTYPE "m" "finite_multiset")))
+  |card_ms_one_char_TCC1-1| NIL 3999605785 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+  (|card_ms_one_char| SUBTYPE "m" "finite_multiset"))
+ ("multisets_nat"
+  (|card_ms_one_char_TCC1| 0
+   (|card_ms_one_char_TCC1-1| NIL 3999605785 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+    (|card_ms_one_char| SUBTYPE "m" "finite_multiset")))
+  . 0))(("multisets_nat"
+  (|card_union_ms_TCC1| 0
+   (|card_union_ms_TCC1-0| "" 4000313349
+    ("" (SKEEP)
+     (("" (LEMMA "union_fin_ms_is_fin_ms") (("" (INST -1 "m" "n") NIL NIL))
+       NIL))
+     NIL)
+    NIL SHOSTAK (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset"))
+   (|card_union_ms_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL)
+    ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+     (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+     (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+     (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+     (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+     (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+     (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+     (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+     (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+     (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+     (>= CONST-DECL "bool" |reals| NIL)
+     (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+     (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+     (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+     (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+     (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
+    NIL (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset")))
+  |card_union_ms_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL)
+  ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+   (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+   (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+   (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+   (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+   (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+   (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+   (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+   (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+   (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+   (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+   (>= CONST-DECL "bool" |reals| NIL)
+   (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+   (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+   (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+   (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+   (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
+  NIL (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset"))
+ ("multisets_nat"
+  (|card_union_ms_TCC1| 0
+   (|card_union_ms_TCC1-0| "" 4000313349
+    ("" (SKEEP)
+     (("" (LEMMA "union_fin_ms_is_fin_ms") (("" (INST -1 "m" "n") NIL NIL))
+       NIL))
+     NIL)
+    NIL SHOSTAK (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset"))
+   (|card_union_ms_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL)
+    ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+     (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+     (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+     (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+     (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+     (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+     (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+     (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+     (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+     (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+     (>= CONST-DECL "bool" |reals| NIL)
+     (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+     (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+     (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+     (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+     (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
+    NIL (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset")))
+  |card_union_ms_TCC1-0| "" 4000313349
+  ("" (SKEEP)
+   (("" (LEMMA "union_fin_ms_is_fin_ms") (("" (INST -1 "m" "n") NIL NIL)) NIL))
+   NIL)
+  NIL SHOSTAK (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset"))
+ ("multisets_nat"
+  (|card_union_ms_TCC1| 0
+   (|card_union_ms_TCC1-0| "" 4000313349
+    ("" (SKEEP)
+     (("" (LEMMA "union_fin_ms_is_fin_ms") (("" (INST -1 "m" "n") NIL NIL))
+       NIL))
+     NIL)
+    NIL SHOSTAK (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset"))
+   (|card_union_ms_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL)
+    ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+     (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+     (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+     (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+     (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+     (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+     (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+     (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+     (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+     (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+     (>= CONST-DECL "bool" |reals| NIL)
+     (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+     (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+     (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+     (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+     (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
+    NIL (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset")))
+  . 0))(("multisets_nat"
+  (|card_union_ms_TCC1| 0
+   (|card_union_ms_TCC1-0| "" 4000313349
+    ("" (SKEEP)
+     (("" (LEMMA "union_fin_ms_is_fin_ms") (("" (INST -1 "m" "n") NIL NIL))
+       NIL))
+     NIL)
+    NIL SHOSTAK (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset"))
+   (|card_union_ms_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL)
+    ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+     (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+     (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+     (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+     (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+     (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+     (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+     (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+     (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+     (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+     (>= CONST-DECL "bool" |reals| NIL)
+     (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+     (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+     (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+     (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+     (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
+    NIL (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset")))
+  |card_union_ms_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL)
+  ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+   (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+   (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+   (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+   (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+   (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+   (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+   (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+   (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+   (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+   (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+   (>= CONST-DECL "bool" |reals| NIL)
+   (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+   (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+   (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+   (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+   (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
+  NIL (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset"))
+ ("multisets_nat"
+  (|card_union_ms_TCC1| 0
+   (|card_union_ms_TCC1-0| "" 4000313349
+    ("" (SKEEP)
+     (("" (LEMMA "union_fin_ms_is_fin_ms") (("" (INST -1 "m" "n") NIL NIL))
+       NIL))
+     NIL)
+    NIL SHOSTAK (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset"))
+   (|card_union_ms_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL)
+    ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+     (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+     (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+     (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+     (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+     (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+     (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+     (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+     (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+     (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+     (>= CONST-DECL "bool" |reals| NIL)
+     (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+     (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+     (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+     (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+     (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
+    NIL (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset")))
+  |card_union_ms_TCC1-0| "" 4000313349
+  ("" (SKEEP)
+   (("" (LEMMA "union_fin_ms_is_fin_ms") (("" (INST -1 "m" "n") NIL NIL)) NIL))
+   NIL)
+  NIL SHOSTAK (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset"))
+ ("multisets_nat"
+  (|card_union_ms_TCC1| 0
+   (|card_union_ms_TCC1-0| "" 4000313349
+    ("" (SKEEP)
+     (("" (LEMMA "union_fin_ms_is_fin_ms") (("" (INST -1 "m" "n") NIL NIL))
+       NIL))
+     NIL)
+    NIL SHOSTAK (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset"))
+   (|card_union_ms_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL)
+    ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+     (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+     (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+     (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+     (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+     (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+     (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+     (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+     (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+     (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+     (>= CONST-DECL "bool" |reals| NIL)
+     (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+     (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+     (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+     (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+     (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
+    NIL (|card_union_ms| SUBTYPE "union(m, n)" "finite_multiset")))
+  . 0))

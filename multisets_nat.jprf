@@ -2406,5 +2406,3852 @@
     ]
    }
   }
+ ],
+ "multisets_nat.subset_m_m": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "subset_m_m",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "10259aadba0b09938ab0b61aeedf7595c79a16041901d62888a0683535f893ba"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "subset_m_m",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(EXPAND \"subset\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.subset_ms_subset_dom": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "subset_ms_subset_dom",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "15202dac557ea9f49b41f2edbaaa35359929df9989ba8d89d57c184d9b0e3c39"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "subset_ms_subset_dom",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(EXPAND \"subset\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"subset?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"domain\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(SKEEP)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"x\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(ASSERT)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.subset_ms_subset_diff_singl": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "subset_ms_subset_diff_singl",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "15202dac557ea9f49b41f2edbaaa35359929df9989ba8d89d57c184d9b0e3c39"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "subset_ms_subset_diff_singl",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(BETA)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(SPLIT)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(LEMMA \"subset_difference\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(INST? :WHERE 1)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(INST? :WHERE 1)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.subset_ms_subset_diff_singl_TCC1": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "subset_ms_subset_diff_singl_TCC1",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "15202dac557ea9f49b41f2edbaaa35359929df9989ba8d89d57c184d9b0e3c39"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "subset_ms_subset_diff_singl_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(EXPAND \"nonempty?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"empty?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"domain\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(ASSERT)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(HIDE -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"empty\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(APPLY-EXTENSIONALITY :HIDE? T)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"x!1\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(ASSERT)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.dom_diff_w_rep_TCC1": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "dom_diff_w_rep_TCC1",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "06a0e84ed269ce2e2b4aa24c6c18d29afaede9de8c3f93b8d10c14051b408e14"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "dom_diff_w_rep_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(LEMMA \"difference_fin_ms_is_fin_ms\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST?)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.dom_diff_w_rep": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "dom_diff_w_rep",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "06a0e84ed269ce2e2b4aa24c6c18d29afaede9de8c3f93b8d10c14051b408e14"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "dom_diff_w_rep",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(APPLY-EXTENSIONALITY :HIDE? T)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"domain\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"remove\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"difference\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"singleton_w_rep\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(LIFT-IF)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(GROUND)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(GROUND)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.card_dom_diff_w_rep": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "card_dom_diff_w_rep",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "06a0e84ed269ce2e2b4aa24c6c18d29afaede9de8c3f93b8d10c14051b408e14"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "card_dom_diff_w_rep",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(REWRITE \"dom_diff_w_rep\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(REWRITE \"card_remove[nat]\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"domain\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(ASSERT)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.occurrences_TCC2": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "occurrences_TCC2",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "06a0e84ed269ce2e2b4aa24c6c18d29afaede9de8c3f93b8d10c14051b408e14"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "occurrences_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(TYPEPRED \"a\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"domain\" -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(REPLACE -3 :HIDE? T)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(LEMMA \"card_dom_diff_w_rep\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"m\" \"a\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(ASSERT)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.occurrences_TCC1": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "occurrences_TCC1",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "06a0e84ed269ce2e2b4aa24c6c18d29afaede9de8c3f93b8d10c14051b408e14"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "occurrences_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(SKEEP)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(REPLACE -2 :HIDE? T)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(LEMMA \"difference_fin_ms_is_fin_ms\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST?)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.occurrences_TCC3": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "occurrences_TCC3",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "06a0e84ed269ce2e2b4aa24c6c18d29afaede9de8c3f93b8d10c14051b408e14"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "occurrences_TCC3",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(EXPAND \"nonempty?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"empty?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"domain\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"empty\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(APPLY-EXTENSIONALITY :HIDE? T)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"x!1\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(ASSERT)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.occ_remove_any": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "occ_remove_any",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "06a0e84ed269ce2e2b4aa24c6c18d29afaede9de8c3f93b8d10c14051b408e14"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "occ_remove_any",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(SKEEP)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(EXPAND \"occurrences\" 1 1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(REPLACE -1)",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(EXPAND \"empty\" -3)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(ASSERT)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(NAME \"b\" \"choose(domain(x!1))\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(REPLACE -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(TYPEPRED \"b\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(EXPAND \"domain\" -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(REPLACE -1)",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "1.2.1",
+                "name": "(1.2.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.2.1",
+                  "name": "(spread (case \"b = a\") ((then (replace -1) (assert)) (then (case \"difference(x!1, singleton_w_rep(b, x!1(b)))(a) = x!1(a) AND difference(x!1, singleton_w_rep(a, x!1(a)))(b) = x!1(b)\") (hide-all-but (-1 -2 -4 -5 1 3)))))",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               },
+               {
+                "branch": "1.2.2",
+                "name": "(1.2.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.2.2",
+                  "name": "(HIDE-ALL-BUT (-1 -2 -4 -5 1 3))",
+                  "type": "proof-command",
+                  "rules": [
+                   {
+                    "branch": "1.2.2.1",
+                    "name": "(1.2.2.1)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.2.2.1",
+                      "name": "(LABEL \"ih\" -4)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.2.2.1",
+                      "name": "(INST-CP \"ih\" \"difference(x!1, singleton_w_rep(b, x!1(b)))\" \"a\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.2.2.1",
+                      "name": "(INST \"ih\" \"difference(x!1, singleton_w_rep(a, x!1(a)))\" \"b\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.2.2.1",
+                      "name": "(REPLACE -2 (-4 -5))",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.2.2.1",
+                      "name": "(LEMMA \"card_dom_diff_w_rep\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.2.2.1",
+                      "name": "(INST-CP -1 \"x!1\" \"a\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.2.2.1",
+                      "name": "(INST -1 \"x!1\" \"b\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.2.2.1",
+                      "name": "(ASSERT)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.2.2.1",
+                      "name": "(CASE    \"difference(difference(x!1, singleton_w_rep(b, x!1(b))), singleton_w_rep(a, x!1(a))) = difference(difference(x!1, singleton_w_rep(a, x!1(a))), singleton_w_rep(b, x!1(b)))\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.2.2.1",
+                      "name": "(REPLACE -1)",
+                      "type": "proof-command",
+                      "rules": [
+                       {
+                        "branch": "1.2.2.1.1",
+                        "name": "(1.2.2.1.1)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "1.2.2.1.1",
+                          "name": "(ASSERT)",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       },
+                       {
+                        "branch": "1.2.2.1.2",
+                        "name": "(1.2.2.1.2)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "1.2.2.1.2",
+                          "name": "(APPLY-EXTENSIONALITY :HIDE? T)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.2.2.1.2",
+                          "name": "(EXPAND \"difference\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.2.2.1.2",
+                          "name": "(EXPAND \"singleton_w_rep\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.2.2.1.2",
+                          "name": "(LIFT-IF)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.2.2.1.2",
+                          "name": "(GROUND)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.2.2.1.2",
+                          "name": "(ASSERT)",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "1.2.2.2",
+                    "name": "(1.2.2.2)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.2.2.2",
+                      "name": "(EXPAND \"singleton_w_rep\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.2.2.2",
+                      "name": "(LIFT-IF)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.2.2.2",
+                      "name": "(GROUND)",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "3",
+        "name": "(3)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "3",
+          "name": "(INST? -1 :WHERE 1)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.occ_remove_one": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "occ_remove_one",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "06a0e84ed269ce2e2b4aa24c6c18d29afaede9de8c3f93b8d10c14051b408e14"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "occ_remove_one",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(LEMMA \"occ_remove_any\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST-CP -1 \"m\" \"a\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"difference(m, singleton_ms(a))\" \"a\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(CASE    \"difference(m, singleton_ms(a))(a) = m(a) - 1 AND difference(difference(m, singleton_ms(a)), singleton_w_rep(a, m(a) - 1)) = difference(m, singleton_w_rep(a, m(a))) AND (m(a) = 1 IMPLIES difference(m, singleton_ms(a)) = difference(m, singleton_w_rep(a, m(a))))\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(FLATTEN)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(REPLACE -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(CASE \"m(a) = 1\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(ASSERT)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(SPLIT 1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(EXPAND \"difference\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "2.1",
+            "name": "(2.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.1",
+              "name": "(EXPAND \"singleton_ms\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(LIFT-IF)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(GROUND)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(then (reveal -3) (assert))",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "2.2",
+            "name": "(2.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.2",
+              "name": "(EXPAND \"difference\")",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "2.2.1",
+                "name": "(2.2.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "2.2.1",
+                  "name": "(EXPAND \"singleton_ms\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.2.1",
+                  "name": "(EXPAND \"singleton_w_rep\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.2.1",
+                  "name": "(LIFT-IF)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.2.1",
+                  "name": "(GROUND)",
+                  "type": "proof-command",
+                  "rules": [
+                   {
+                    "branch": "2.2.1.1",
+                    "name": "(2.2.1.1)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "2.2.1.1",
+                      "name": "(REPLACE -2 :DIR RL)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "2.2.1.1",
+                      "name": "(LIFT-IF)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "2.2.1.1",
+                      "name": "(GROUND)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "2.2.1.1",
+                      "name": "(then (reveal -4) (replace -2 :dir rl) (lift-if) (ground))",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "2.2.1.2",
+                    "name": "(2.2.1.2)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "2.2.1.2",
+                      "name": "(then (lift-if) (ground) (lift-if) (ground))",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               },
+               {
+                "branch": "2.2.2",
+                "name": "(2.2.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "2.2.2",
+                  "name": "(then (reveal -4) (assert))",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "branch": "2.3",
+            "name": "(2.3)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.3",
+              "name": "(EXPAND \"difference\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.3",
+              "name": "(EXPAND \"singleton_ms\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.3",
+              "name": "(EXPAND \"singleton_w_rep\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.3",
+              "name": "(GROUND)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.3",
+              "name": "(LIFT-IF)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.3",
+              "name": "(GROUND)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.3",
+              "name": "(then (apply-extensionality 1 :hide? t) (lift-if) (ground))",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "3T",
+        "name": "(3T)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "3T",
+          "name": "(ASSERT)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.occ_eq_card_ms": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "occ_eq_card_ms",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "c041ae6315d6676f1d9ea7266617848bb30dc4bafa9caef58e59d928f8bd5b5c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "occ_eq_card_ms",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(EXPAND \"card_ms\" 1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(CASE \"x!1 = empty\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(ASSERT)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(REPLACE -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(EXPAND \"occurrences\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(spread (measure-induct+ \"occurrences(m)\" (\"m\")) ((then (expand \"card_ms\" 1) (spread (case \"x!1 = empty\") ((then (assert) (replace -1) (expand \"occurrences\") (propax)) (then (assert) (name \"b\" \"choose(domain(x!1))\") (replace -1) (typepred \"b\") (expand \"domain\" -1) (lemma \"occ_remove_one\") (inst -1 \"x!1\" \"b\") (assert) (inst -4 \"difference(x!1, singleton_ms(b))\") (assert)))))))",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(NAME \"b\" \"choose(domain(x!1))\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(REPLACE -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(TYPEPRED \"b\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(EXPAND \"domain\" -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(LEMMA \"occ_remove_one\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(INST -1 \"x!1\" \"b\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(ASSERT)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(INST -4 \"difference(x!1, singleton_ms(b))\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(ASSERT)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.occ_remove_one_TCC1": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "occ_remove_one_TCC1",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "86e0fe019e303f2aa64213ee88cd67b52972e6b22a7f3ab372e8c902152bdf29"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "occ_remove_one_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(LEMMA \"difference_fin_ms_is_fin_ms\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST? -1 :WHERE 1)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.card_ms_TCC1": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "card_ms_TCC1",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "c041ae6315d6676f1d9ea7266617848bb30dc4bafa9caef58e59d928f8bd5b5c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "card_ms_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(SKEEP)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(REPLACE -2 :HIDE? T)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(LEMMA \"difference_fin_ms_is_fin_ms\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"m\" \"singleton_ms(a)\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.card_ms_TCC2": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "card_ms_TCC2",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "c041ae6315d6676f1d9ea7266617848bb30dc4bafa9caef58e59d928f8bd5b5c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "card_ms_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(SKEEP)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(REPLACE -2 :HIDE? T)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(TYPEPRED \"a\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"domain\" -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(LEMMA \"occ_remove_one\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"m\" \"a\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(ASSERT)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.card_empty_ms": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "card_empty_ms",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "c041ae6315d6676f1d9ea7266617848bb30dc4bafa9caef58e59d928f8bd5b5c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "card_empty_ms",
+    "type": "root",
+    "rules": []
+   }
+  }
+ ],
+ "multisets_nat.card_empty_ms_TCC1": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "card_empty_ms_TCC1",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "c041ae6315d6676f1d9ea7266617848bb30dc4bafa9caef58e59d928f8bd5b5c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "card_empty_ms_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"empty_is_finite\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.card_singleton_ms": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "card_singleton_ms",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "6666b848b2b97f643e80c18c2f2f243fc77195f4cd61259c814cafb2b567afa6"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "card_singleton_ms",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(LEMMA \"occ_eq_card_ms\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"singleton_ms(x)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(REPLACE -1 :DIR RL)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(HIDE -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(LEMMA \"occ_remove_one\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"singleton_ms(x)\" \"x\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(EXPAND \"singleton_ms\" -1 1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(ASSERT)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(CASE    \"difference(singleton_ms(x), singleton_ms(x)) = empty AND occurrences(empty) = 0\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(FLATTEN)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(REPLACE -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(ASSERT)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(SPLIT 1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(EXPAND \"difference\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "2.1",
+            "name": "(2.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.1",
+              "name": "(EXPAND \"empty\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(then (skeep) (lemma \"occ_eq_card_ms\") (inst -1 \"singleton_ms(x)\") (replace -1 :dir rl) (hide -1) (lemma \"occ_remove_one\") (inst -1 \"singleton_ms(x)\" \"x\") (expand \"singleton_ms\" -1 1) (assert) (spread (case \"difference(singleton_ms(x), singleton_ms(x)) = empty AND occurrences(empty) = 0\") ((then (flatten) (replace -1) (assert)) (then (hide-all-but 1) (split 1) (then (apply-extensionality :hide? t) (expand \"difference\") (expand \"empty\") (propax)) (then (expand \"occurrences\") (propax))))))",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "2.2",
+            "name": "(2.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.2",
+              "name": "(EXPAND \"occurrences\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(then (expand \"empty\") (assert))",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "3T",
+        "name": "(3T)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "3T",
+          "name": "(LEMMA \"empty_is_finite\")",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.occ_zero_empty": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "occ_zero_empty",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "d3cbb975a25ae4eca8e94f49c4b7a0dc981f50b650c3be5de2ba709aaa8fb3ea"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "occ_zero_empty",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(EXPAND \"occurrences\" -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(LIFT-IF -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(SPLIT -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(then (skeep) (expand \"occurrences\" -1) (lift-if -1) (split -1) (then (flatten) (propax)) (then (flatten) (name \"b\" \"choose(domain(m))\") (replace -1) (typepred \"b\") (expand \"domain\" -1) (assert)))",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(REPLACE -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(TYPEPRED \"b\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(EXPAND \"domain\" -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(ASSERT)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.card_ms_one_char": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "card_ms_one_char",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "d3cbb975a25ae4eca8e94f49c4b7a0dc981f50b650c3be5de2ba709aaa8fb3ea"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "card_ms_one_char",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(SPLIT)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(FLATTEN)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(LEMMA \"occ_eq_card_ms\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(INST -1 \"m\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(REPLACE -2 -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(HIDE -2)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(CASE \"m = empty\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(EXPAND \"occurrences\" -2)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(ASSERT)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(then (replace -1) (expand \"occurrences\" -2) (assert))",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(EXPAND \"empty\" 1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(LEMMA \"occ_remove_any\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(INST -1 \"m\" \"x!1\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(ASSERT)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(TYPEPRED \"occurrences(difference(m, singleton_w_rep(x!1, m(x!1))))\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(LEMMA \"occ_zero_empty\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(INST -1 \"difference(m, singleton_w_rep(x!1, m(x!1)))\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(ASSERT)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(EXPAND \"is_singleton\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(INST 2 \"x!1\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(APPLY-EXTENSIONALITY 2 :HIDE? T)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(CASE \"difference(m, singleton_w_rep(x!1, m(x!1)))(x!2) = 0\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(HIDE -2 -3)",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "1.2.1",
+                "name": "(1.2.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.2.1",
+                  "name": "(EXPAND \"singleton_w_rep\" -1)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.2.1",
+                  "name": "(EXPAND \"singleton_ms\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.2.1",
+                  "name": "(LIFT-IF)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.2.1",
+                  "name": "(GROUND)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               },
+               {
+                "branch": "1.2.2",
+                "name": "(1.2.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.2.2",
+                  "name": "(EXPAND \"singleton_w_rep\" -1)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.2.2",
+                  "name": "(EXPAND \"singleton_ms\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.2.2",
+                  "name": "(LIFT-IF)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.2.2",
+                  "name": "(GROUND)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.2.2",
+                  "name": "(EXPAND \"empty\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.2.2",
+                  "name": "(INST -1 \"x!2\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.2.2",
+                  "name": "(EXPAND \"difference\" 3)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.2.2",
+                  "name": "(EXPAND \"singleton_w_rep\" 3)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.2.2",
+                  "name": "(ASSERT)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.2.2",
+                  "name": "(then (decompose-equality -1) (inst -1 \"x!2\") (expand \"difference\" 3) (expand \"singleton_w_rep\" 3) (assert))",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(LEMMA \"occ_eq_card_ms\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(INST -1 \"m\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(HIDE -2)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(CASE \"m = empty\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "2.1",
+            "name": "(2.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.1",
+              "name": "(EXPAND \"is_singleton\" -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(SKOLEM -1 \"z\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(REPLACE -1 1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(LEMMA \"card_singleton_ms\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(INST -1 \"z\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(then (reveal -1) (expand \"is_singleton\" -1) (skolem -1 \"z\") (replace -1 1) (lemma \"card_singleton_ms\") (inst -1 \"z\") (assert))",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "2.2",
+            "name": "(2.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.2",
+              "name": "(EXPAND \"is_singleton\" -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(SKOLEM -1 \"z\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(REPLACE -1 2)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(LEMMA \"card_singleton_ms\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(INST -1 \"z\")",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.card_singleton_w_rep": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "card_singleton_w_rep",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "1dcb2e2768f86c6d9e1815e520aff6861ae735023b09f6f905cfa8ec614df440"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "card_singleton_w_rep",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(LEMMA \"occ_eq_card_ms\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"singleton_w_rep(x,y)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(REPLACE -1 :DIR RL)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(HIDE -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(CASE    \"singleton_w_rep(x,y)(x) = y AND difference(singleton_w_rep(x, y), singleton_w_rep(x, y)) = empty AND occurrences(empty) = 0 AND (y = 0 IMPLIES singleton_w_rep(x,y) = empty)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(FLATTEN)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(CASE \"y = 0\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(ASSERT)",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(INST -1 \"singleton_w_rep(x,y)\" \"x\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(REPLACE -2 -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(REPLACE -3 -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(REPLACE -4 -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(ASSERT)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(SPLIT 1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(then (skeep) (lemma \"occ_eq_card_ms\") (inst -1 \"singleton_w_rep(x,y)\") (replace -1 :dir rl) (hide -1) (spread (case \"singleton_w_rep(x,y)(x) = y AND difference(singleton_w_rep(x, y), singleton_w_rep(x, y)) = empty AND occurrences(empty) = 0 AND (y = 0 IMPLIES singleton_w_rep(x,y) = empty)\") ((then (flatten) (spread (case \"y = 0\") ((then (assert) (replace -5 1) (assert)) (then (lemma \"occ_remove_any\") (inst -1 \"singleton_w_rep(x,y)\" \"x\") (replace -2 -1) (replace -3 -1) (replace -4 -1) (assert))))) (then (hide 2) (split 1) (then (expand \"singleton_w_rep\") (propax)) (then (apply-extensionality :hide? t) (expand \"difference\") (expand \"empty\") (propax)) (then (expand \"occurrences\") (expand \"empty\") (propax)) (then (flatten) (apply-extensionality :hide? t) (expand \"singleton_w_rep\") (expand \"empty\") (lift-if) (ground))))))",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "2.2",
+            "name": "(2.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.2",
+              "name": "(EXPAND \"empty\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(then (skeep) (lemma \"occ_eq_card_ms\") (inst -1 \"singleton_w_rep(x,y)\") (replace -1 :dir rl) (hide -1) (spread (case \"singleton_w_rep(x,y)(x) = y AND difference(singleton_w_rep(x, y), singleton_w_rep(x, y)) = empty AND occurrences(empty) = 0 AND (y = 0 IMPLIES singleton_w_rep(x,y) = empty)\") ((then (flatten) (spread (case \"y = 0\") ((then (assert) (replace -5 1) (assert)) (then (lemma \"occ_remove_any\") (inst -1 \"singleton_w_rep(x,y)\" \"x\") (replace -2 -1) (replace -3 -1) (replace -4 -1) (assert))))) (then (hide 2) (split 1) (then (expand \"singleton_w_rep\") (propax)) (then (apply-extensionality :hide? t) (expand \"difference\") (expand \"empty\") (propax)) (then (expand \"occurrences\") (expand \"empty\") (propax)) (then (flatten) (apply-extensionality :hide? t) (expand \"singleton_w_rep\") (expand \"empty\") (lift-if) (ground))))))",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "2.3",
+            "name": "(2.3)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.3",
+              "name": "(EXPAND \"occurrences\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.3",
+              "name": "(EXPAND \"empty\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.3",
+              "name": "(then (skeep) (lemma \"occ_eq_card_ms\") (inst -1 \"singleton_w_rep(x,y)\") (replace -1 :dir rl) (hide -1) (spread (case \"singleton_w_rep(x,y)(x) = y AND difference(singleton_w_rep(x, y), singleton_w_rep(x, y)) = empty AND occurrences(empty) = 0 AND (y = 0 IMPLIES singleton_w_rep(x,y) = empty)\") ((then (flatten) (spread (case \"y = 0\") ((then (assert) (replace -5 1) (assert)) (then (lemma \"occ_remove_any\") (inst -1 \"singleton_w_rep(x,y)\" \"x\") (replace -2 -1) (replace -3 -1) (replace -4 -1) (assert))))) (then (hide 2) (split 1) (then (expand \"singleton_w_rep\") (propax)) (then (apply-extensionality :hide? t) (expand \"difference\") (expand \"empty\") (propax)) (then (expand \"occurrences\") (expand \"empty\") (propax)) (then (flatten) (apply-extensionality :hide? t) (expand \"singleton_w_rep\") (expand \"empty\") (lift-if) (ground))))))",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "2.4",
+            "name": "(2.4)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.4",
+              "name": "(FLATTEN)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.4",
+              "name": "(APPLY-EXTENSIONALITY :HIDE? T)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.4",
+              "name": "(LIFT-IF)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.4",
+              "name": "(GROUND)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "3T",
+        "name": "(3T)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "3T",
+          "name": "(LEMMA \"empty_is_finite\")",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.card_union_ms_TCC1": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "card_union_ms_TCC1",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "2d6196c0c34a8e23496e42b028daa608f7263a95aa632310f0122209ba944f2f"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "card_union_ms_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(LEMMA \"union_fin_ms_is_fin_ms\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"m\" \"n\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.occ_union_TCC1": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "occ_union_TCC1",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "93020c7043a4b5bc7d1865a5b7f3498433d3c782614c6e80839f07a6dd1c945b"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "occ_union_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(LEMMA \"union_fin_ms_is_fin_ms\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"m\" \"n\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.occ_union": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "occ_union",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "93020c7043a4b5bc7d1865a5b7f3498433d3c782614c6e80839f07a6dd1c945b"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "occ_union",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(SKEEP)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(CASE \"occurrences(empty) = 0\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(CASE \"x!1 = empty\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(REPLACE -1)",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "1.1.1",
+                "name": "(1.1.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.1.1",
+                  "name": "(LEMMA \"union_empty_left\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(INST -1 \"n\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(REPLACE -1)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(ASSERT)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               },
+               {
+                "branch": "1.1.2",
+                "name": "(1.1.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.1.2",
+                  "name": "(TYPEPRED \"b\")",
+                  "type": "proof-command",
+                  "rules": [
+                   {
+                    "branch": "1.1.2.1",
+                    "name": "(1.1.2.1)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.1.2.1",
+                      "name": "(EXPAND \"domain\" -1)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.1",
+                      "name": "(HIDE -2)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.1",
+                      "name": "(INST-CP -1 \"x!1\" \"b\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.1",
+                      "name": "(ASSERT)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.1",
+                      "name": "(inst -1 \"union(x!1, n)\" \"b\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.1",
+                      "name": "(FLATTEN)",
+                      "type": "proof-command",
+                      "rules": [
+                       {
+                        "branch": "1.1.2.1.1",
+                        "name": "(1.1.2.1.1)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "1.1.2.1.1",
+                          "name": "(REPLACE -2 -3)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.2.1.1",
+                          "name": "(ASSERT)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.2.1.1",
+                          "name": "(INST -7 \"difference(x!1, singleton_ms(b))\" \"n\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.2.1.1",
+                          "name": "(ASSERT)",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       },
+                       {
+                        "branch": "1.1.2.1.2",
+                        "name": "(1.1.2.1.2)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "1.1.2.1.2",
+                          "name": "(SPLIT 1)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.2.1.2",
+                          "name": "(EXPAND \"union\")",
+                          "type": "proof-command",
+                          "rules": [
+                           {
+                            "branch": "1.1.2.1.2.2",
+                            "name": "(1.1.2.1.2.2)",
+                            "type": "proof-branch",
+                            "rules": [
+                             {
+                              "branch": "1.1.2.1.2.2",
+                              "name": "(APPLY-EXTENSIONALITY :HIDE? T)",
+                              "type": "proof-command",
+                              "rules": []
+                             },
+                             {
+                              "branch": "1.1.2.1.2.2",
+                              "name": "(EXPAND \"difference\")",
+                              "type": "proof-command",
+                              "rules": []
+                             },
+                             {
+                              "branch": "1.1.2.1.2.2",
+                              "name": "(EXPAND \"singleton_ms\")",
+                              "type": "proof-command",
+                              "rules": []
+                             },
+                             {
+                              "branch": "1.1.2.1.2.2",
+                              "name": "(LIFT-IF)",
+                              "type": "proof-command",
+                              "rules": []
+                             },
+                             {
+                              "branch": "1.1.2.1.2.2",
+                              "name": "(GROUND)",
+                              "type": "proof-command",
+                              "rules": [
+                               {
+                                "branch": "1.1.2.1.2.2.1",
+                                "name": "(1.1.2.1.2.2.1)",
+                                "type": "proof-branch",
+                                "rules": [
+                                 {
+                                  "branch": "1.1.2.1.2.2.1",
+                                  "name": "(LIFT-IF)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.1.2.1.2.2.1",
+                                  "name": "(GROUND)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.1.2.1.2.2.1",
+                                  "name": "(SPLIT 1)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.1.2.1.2.2.1",
+                                  "name": "(then (lift-if) (split 1) (then (flatten) (assert)) (then (flatten) (assert)))",
+                                  "type": "proof-command",
+                                  "rules": [
+                                   {
+                                    "branch": "1.1.2.1.2.2.1.2",
+                                    "name": "(1.1.2.1.2.2.1.2)",
+                                    "type": "proof-branch",
+                                    "rules": [
+                                     {
+                                      "branch": "1.1.2.1.2.2.1.2",
+                                      "name": "(then (lift-if) (split 1) (then (flatten) (assert)) (then (flatten) (assert)))",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     }
+                                    ]
+                                   }
+                                  ]
+                                 }
+                                ]
+                               },
+                               {
+                                "branch": "1.1.2.1.2.2.2",
+                                "name": "(1.1.2.1.2.2.2)",
+                                "type": "proof-branch",
+                                "rules": [
+                                 {
+                                  "branch": "1.1.2.1.2.2.2",
+                                  "name": "(LIFT-IF)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.1.2.1.2.2.2",
+                                  "name": "(SPLIT 1)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.1.2.1.2.2.2",
+                                  "name": "(LIFT-IF)",
+                                  "type": "proof-command",
+                                  "rules": [
+                                   {
+                                    "branch": "1.1.2.1.2.2.2.1",
+                                    "name": "(1.1.2.1.2.2.2.1)",
+                                    "type": "proof-branch",
+                                    "rules": [
+                                     {
+                                      "branch": "1.1.2.1.2.2.2.1",
+                                      "name": "(SPLIT 1)",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     },
+                                     {
+                                      "branch": "1.1.2.1.2.2.2.1",
+                                      "name": "(ASSERT)",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     }
+                                    ]
+                                   },
+                                   {
+                                    "branch": "1.1.2.1.2.2.2.2",
+                                    "name": "(1.1.2.1.2.2.2.2)",
+                                    "type": "proof-branch",
+                                    "rules": [
+                                     {
+                                      "branch": "1.1.2.1.2.2.2.2",
+                                      "name": "(ASSERT)",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     }
+                                    ]
+                                   }
+                                  ]
+                                 }
+                                ]
+                               }
+                              ]
+                             }
+                            ]
+                           }
+                          ]
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "1.1.2.2T",
+                    "name": "(1.1.2.2T)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.1.2.2T",
+                      "name": "(EXPAND \"nonempty?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.2T",
+                      "name": "(EXPAND \"empty?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.2T",
+                      "name": "(EXPAND \"domain\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.2T",
+                      "name": "(EXPAND \"member\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.2T",
+                      "name": "(APPLY-EXTENSIONALITY 1 :HIDE? T)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.2T",
+                      "name": "(EXPAND \"empty\" 1)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.2T",
+                      "name": "(INST -1 \"x!2\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.2T",
+                      "name": "(ASSERT)",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(EXPAND \"occurrences\" 1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(then (hide 3) (expand \"nonempty?\") (expand \"empty?\") (expand \"domain\") (expand \"member\") (apply-extensionality 1 :hide? t) (expand \"empty\" 1) (inst -1 \"x!2\") (assert))",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.3T",
+            "name": "(1.3T)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.3T",
+              "name": "(LEMMA \"empty_is_finite\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3T",
+              "name": "(then (hide 3) (expand \"nonempty?\") (expand \"empty?\") (expand \"domain\") (expand \"member\") (apply-extensionality 1 :hide? t) (expand \"empty\" 1) (inst -1 \"x!2\") (assert))",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(INST? -1 :WHERE 1)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "3",
+        "name": "(3)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "3",
+          "name": "(INST? -1 :WHERE 1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "3",
+          "name": "(then (hide 3) (expand \"nonempty?\") (expand \"empty?\") (expand \"domain\") (expand \"member\") (apply-extensionality 1 :hide? t) (expand \"empty\" 1) (inst -1 \"x!2\") (assert))",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.card_union_ms": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "card_union_ms",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "93020c7043a4b5bc7d1865a5b7f3498433d3c782614c6e80839f07a6dd1c945b"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "card_union_ms",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(LEMMA \"occ_eq_card_ms\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST-CP -1 \"m\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST-CP -1 \"n\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"union(m, n)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(REPLACE -1 :DIR RL)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(REPLACE -2 :DIR RL)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(REPLACE -3 :DIR RL)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(LEMMA \"occ_union\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"m\" \"n\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.card_difference_ms_TCC1": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "card_difference_ms_TCC1",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "daec78ca140b95dcc38c563eb7e6c2ae8ddaed81f0434a0394e4285f19ce2eb9"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "card_difference_ms_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(LEMMA \"difference_fin_ms_is_fin_ms\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"m\" \"n\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.card_difference_ms_TCC2": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "card_difference_ms_TCC2",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "daec78ca140b95dcc38c563eb7e6c2ae8ddaed81f0434a0394e4285f19ce2eb9"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "card_difference_ms_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(LEMMA \"intersection_fin_ms_is_fin_ms\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"m\" \"n\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.card_difference_ms": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "card_difference_ms",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "daec78ca140b95dcc38c563eb7e6c2ae8ddaed81f0434a0394e4285f19ce2eb9"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "card_difference_ms",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(LEMMA \"card_union_ms\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"difference(m, n)\" \"intersection(m, n)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(CASE \"union(difference(m, n), intersection(m, n)) = m\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(REPLACE -1 -2)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(ASSERT)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(APPLY-EXTENSIONALITY :HIDE? T)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(EXPAND \"union\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(EXPAND \"difference\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(EXPAND \"intersection\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(EXPAND \"min\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(LIFT-IF)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(GROUND)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.ms_below_TCC1": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "ms_below_TCC1",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "02dcb29b33d310819c91b5cc9614a888ed63ed79be1885dec34f9f00ded6ae37"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ms_below_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(LEMMA \"subset_fin_ms_is_fin_ms\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"LAMBDA (z: nat): IF z < a THEN Y(z) ELSE 0 ENDIF\" \"Y\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(SPLIT -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(then (skeep) (lemma \"subset_fin_ms_is_fin_ms\") (inst -1 \"LAMBDA (z: nat): IF z < a THEN Y(z) ELSE 0 ENDIF\" \"Y\") (split -1) (propax) (then (hide 2) (expand \"subset\") (skeep) (lift-if) (ground)))",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(EXPAND \"subset\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(SKEEP)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(LIFT-IF)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(GROUND)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.ms_above_TCC1": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "ms_above_TCC1",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "02dcb29b33d310819c91b5cc9614a888ed63ed79be1885dec34f9f00ded6ae37"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ms_above_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(LEMMA \"subset_fin_ms_is_fin_ms\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(INST -1 \"LAMBDA (z: nat): IF z < a THEN 0 ELSE Y(z) ENDIF\" \"Y\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(SPLIT -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(then (skeep) (lemma \"subset_fin_ms_is_fin_ms\") (inst -1 \"LAMBDA (z: nat): IF z < a THEN 0 ELSE Y(z) ENDIF\" \"Y\") (split -1) (propax) (then (hide 2) (expand \"subset\") (skeep) (lift-if) (ground)))",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(EXPAND \"subset\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(SKEEP)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(LIFT-IF)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(GROUND)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.ms_ord_subset_ms_ord_one_tc": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "ms_ord_subset_ms_ord_one_tc",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "4497d6d784c634eb5ddbd198b2ded868c9608e87264791f13df50aee83036c9b"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ms_ord_subset_ms_ord_one_tc",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"subset?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"ms_ord\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"ms_ord_tc_aux\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skolem -2 (\"X\" \"Y\"))",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(inst?)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(PROP)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "multisets_nat.ms_ord_tc_aux": [
+  {
+   "info": {
+    "theory": "multisets_nat",
+    "formula": "ms_ord_tc_aux",
+    "status": "proved",
+    "prover": "PVS 8.1 (SBCL 2.4.8)",
+    "shasum": "7c8c2834a21d8b1e38d54def69c68339f31735c7ad441ab73c13915f98c2ebd3"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ms_ord_tc_aux",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(MEASURE-INDUCT+ \"card_ms(X)\" (\"X\" \"A\" \"B\" \"Y\"))",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(NAME-REPLACE \"A\" \"x!2\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(NAME-REPLACE \"B\" \"x!3\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(NAME-REPLACE \"X\" \"x!1\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(NAME-REPLACE \"Y\" \"x!4\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(NAME-REPLACE \"x\" \"choose(domain(X))\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(TYPEPRED \"x\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(EXPAND \"domain\" -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(HIDE -2)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(LABEL \"xx\" -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(LABEL \"ih\" -2)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(LABEL \"sub\" -3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(LABEL \"beq\" -4)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(LABEL \"dom\" -5)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(CASE \"A(x) > 0\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(LEMMA \"ms_ord_one_step\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(INST -1 \"A\" \"Y\" \"x\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(ASSERT)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(LEMMA \"R_subset_TC[finite_multiset]\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(INST -1 \"ms_ord_one\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(EXPAND \"subset?\" -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(EXPAND \"member\" -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(INST -1 \"(A, union(difference(A, singleton_ms(x)), ms_below(Y, x)))\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(ASSERT)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(LABEL \"tc1\" -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(LEMMA \"ms_split_eq\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(INST -1 \"X\" \"A\" \"Y\" \"x\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(ASSERT)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(REPLACE -1 \"beq\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(HIDE -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(CASE \"difference(X, singleton_ms(x)) = empty\")",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "1.1.1",
+                "name": "(1.1.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.1.1",
+                  "name": "(LABEL \"xe\" -1)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(LEMMA \"ms_split_dom_empty\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(INST -1 \"X\" \"Y\" \"x\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(SPLIT -1)",
+                  "type": "proof-command",
+                  "rules": [
+                   {
+                    "branch": "1.1.1.1",
+                    "name": "(1.1.1.1)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(REPLACE -1 \"beq\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(REPLACE \"xe\" \"beq\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(REWRITE \"difference_empty_right\" \"beq\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(REWRITE \"union_empty_right\" \"beq\")",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "1.1.1.3",
+                    "name": "(1.1.1.3)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.1.1.3",
+                      "name": "(REPLACE \"beq\" 2)",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               },
+               {
+                "branch": "1.1.2",
+                "name": "(1.1.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.1.2",
+                  "name": "(CASE \"card_ms(difference(X, singleton_ms(x))) < card_ms(X)\")",
+                  "type": "proof-command",
+                  "rules": [
+                   {
+                    "branch": "1.1.2.1",
+                    "name": "(1.1.2.1)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.1.2.1",
+                      "name": "(INST \"ih\" \"difference(X, singleton_ms(x))\" \"union(difference(A, singleton_ms(x)), ms_below(Y, x))\" \"B\" \"ms_above(Y, x)\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.1",
+                      "name": "(ASSERT)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.1",
+                      "name": "(LEMMA \"ms_split_subset\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.1",
+                      "name": "(INST -1 \"X\" \"A\" \"Y\" \"x\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.1",
+                      "name": "(ASSERT)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.1",
+                      "name": "(LEMMA \"ms_split_dom\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.1",
+                      "name": "(INST -1 \"X\" \"Y\" \"x\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.1",
+                      "name": "(SPLIT -1)",
+                      "type": "proof-command",
+                      "rules": [
+                       {
+                        "branch": "1.1.2.1.1",
+                        "name": "(1.1.2.1.1)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "1.1.2.1.1",
+                          "name": "(ASSERT)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.2.1.1",
+                          "name": "(TYPEPRED \"TC(ms_ord_one)\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.2.1.1",
+                          "name": "(EXPAND \"transitive?\" -1)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.2.1.1",
+                          "name": "(INST -1 \"A\" \"union(difference(A, singleton_ms(x)), ms_below(Y, x))\" \"B\")",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       },
+                       {
+                        "branch": "1.1.2.1.2",
+                        "name": "(1.1.2.1.2)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "1.1.2.1.2",
+                          "name": "(ASSERT)",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "1.1.2.2",
+                    "name": "(1.1.2.2)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.1.2.2",
+                      "name": "(HIDE-ALL-BUT (1 \"xx\"))",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.2",
+                      "name": "(LEMMA \"difference_fin_ms_is_fin_ms\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.2",
+                      "name": "(INST -1 \"X\" \"singleton_ms(x)\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.2",
+                      "name": "(LEMMA \"occ_eq_card_ms\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.2",
+                      "name": "(INST-CP -1 \"X\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.2",
+                      "name": "(INST -1 \"difference(X, singleton_ms(x))\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.2",
+                      "name": "(LEMMA \"occ_remove_one\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.2",
+                      "name": "(INST -1 \"X\" \"x\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.2.2",
+                      "name": "(ASSERT)",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "1.1.2.3",
+                    "name": "(1.1.2.3)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.1.2.3",
+                      "name": "(LEMMA \"difference_fin_ms_is_fin_ms\")",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(EXPAND \"subset\" \"sub\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(INST \"sub\" \"x\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(ASSERT)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(HIDE 3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(EXPAND \"nonempty?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(EXPAND \"empty?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(EXPAND \"domain\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(EXPAND \"member\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(APPLY-EXTENSIONALITY 1 :HIDE? T)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(EXPAND \"empty\" 1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(INST?)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(ASSERT)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
  ]
 }

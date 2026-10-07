@@ -75,7 +75,7 @@ BEGIN
   % @QED subset_difference proved by arthur on Fri, 18 Sep 2026 14:26:07 GMT
   subset_difference: LEMMA
     FORALL m, n: subset(difference(m,n), m)
-  subset_m_m : 	 CONJECTURE
+  subset_m_m : LEMMA
     FORALL m : subset(m,m)
 
 
@@ -117,13 +117,20 @@ BEGIN
 
   is_single_element(m: finite_multiset): bool = EXISTS (x: nat, n: nat): m = singleton_w_rep(x, n)
 
-  subset_ms_subset_dom : CONJECTURE subset(m,n) IMPLIES subset?(domain(m),domain(n))  
+  subset_ms_subset_dom : LEMMA
+    FORALL (m, n: finite_multiset): subset(m,n) IMPLIES subset?(domain(m),domain(n))
 
-  subset_ms_subset_diff_singl : CONJECTURE FORALL(m:finite_multiset | NOT m = empty) :
+  subset_ms_subset_diff_singl : LEMMA FORALL(m:finite_multiset | NOT m = empty) :
                                  LET a = choose(domain(m)) IN
                                    subset(difference(m,singleton_w_rep(a, m(a))), m) AND
 				   subset(difference(m,singleton_ms(a)), m)
-				   
+
+  % Removing every copy of a from m removes exactly a from the domain.
+  dom_diff_w_rep : LEMMA FORALL (m: finite_multiset, a: nat):
+    domain(difference(m, singleton_w_rep(a, m(a)))) = remove(a, domain(m))
+
+  card_dom_diff_w_rep : LEMMA FORALL (m: finite_multiset, a: nat): m(a) > 0 IMPLIES
+    card(domain(difference(m, singleton_w_rep(a, m(a))))) = card(domain(m)) - 1
 
  occurrences(m:finite_multiset) : RECURSIVE nat =
       IF m = empty THEN 0
@@ -133,27 +140,44 @@ BEGIN
       ENDIF
   MEASURE card(domain(m))
 
+  % occurrences does not depend on which element is removed first.
+  occ_remove_any : LEMMA FORALL (m: finite_multiset, a: nat): m(a) > 0 IMPLIES
+    occurrences(m) = m(a) + occurrences(difference(m, singleton_w_rep(a, m(a))))
+
+  occ_remove_one : LEMMA FORALL (m: finite_multiset, a: nat): m(a) > 0 IMPLIES
+    occurrences(m) = 1 + occurrences(difference(m, singleton_ms(a)))
+
+  occ_zero_empty : LEMMA FORALL (m: finite_multiset):
+    occurrences(m) = 0 IMPLIES m = empty
+
+  occ_union : LEMMA FORALL (m, n: finite_multiset):
+    occurrences(union(m, n)) = occurrences(m) + occurrences(n)
+
 card_ms(m:finite_multiset) : RECURSIVE nat =
       IF m = empty THEN 0
       ELSE LET a = choose(domain(m)),
                mp = difference(m,singleton_ms(a)) IN
 	   1 + card_ms(mp)
       ENDIF
-  MEASURE IF m = empty THEN 0 ELSE LET a = choose(domain(m)) IN occurrences(m) - 1 ENDIF
+  MEASURE occurrences(m)
 
- occ_eq_card_ms  : CONJECTURE FORALL(m: finite_multiset) : occurrences(m) = card_ms(m)                       
+  occ_eq_card_ms : LEMMA FORALL(m: finite_multiset) : occurrences(m) = card_ms(m)                       
 
- card_empty_ms : CONJECTURE card_ms(empty) = 0
+  card_empty_ms : LEMMA card_ms(empty) = 0
  
- card_singleton_ms : CONJECTURE card_ms(singleton_ms(x)) = 1
+  card_singleton_ms : LEMMA card_ms(singleton_ms(x)) = 1
 
- card_ms_one_char : CONJECTURE card_ms(m) = 1 IFF is_singleton(m)
+  card_ms_one_char : LEMMA
+    FORALL (m: finite_multiset): card_ms(m) = 1 IFF is_singleton(m)
 
-card_singleton_w_rep : CONJECTURE card_ms(singleton_w_rep(x,y)) = y
+  card_singleton_w_rep : LEMMA card_ms(singleton_w_rep(x,y)) = y
 
-card_union_ms : CONJECTURE card_ms(union(m,n)) = card_ms(m) + card_ms(n)
+  card_union_ms : LEMMA
+    FORALL (m, n: finite_multiset): card_ms(union(m,n)) = card_ms(m) + card_ms(n)
 
-card_difference_ms: CONJECTURE card_ms(difference(m,n)) = card_ms(m) - card_ms(intersection(m,n))
+  card_difference_ms : LEMMA
+    FORALL (m, n: finite_multiset):
+      card_ms(difference(m,n)) = card_ms(m) - card_ms(intersection(m,n))
  
 
   singleton_w_rep_1: LEMMA
@@ -203,7 +227,49 @@ card_difference_ms: CONJECTURE card_ms(difference(m,n)) = card_ms(m) - card_ms(i
   ms_ord_one_subset_tc: LEMMA
     subset?(TC(ms_ord_one),  ms_ord)
 
-  ms_ord_subset_ms_ord_one_tc :  CONJECTURE
+  % Split Y into the elements below a and the rest.
+  ms_below(Y: finite_multiset, a: nat): finite_multiset =
+    LAMBDA (z: nat): IF z < a THEN Y(z) ELSE 0 ENDIF
+
+  ms_above(Y: finite_multiset, a: nat): finite_multiset =
+    LAMBDA (z: nat): IF z < a THEN 0 ELSE Y(z) ENDIF
+
+  % Removing one copy of a and adding the elements of Y below a is one step.
+  ms_ord_one_step : LEMMA
+    FORALL (A, Y: finite_multiset, a: nat): A(a) > 0 IMPLIES
+      ms_ord_one(A, union(difference(A, singleton_ms(a)), ms_below(Y, a)))
+
+  ms_split_eq : LEMMA
+    FORALL (X, A, Y: finite_multiset, a: nat): subset(X, A) AND X(a) > 0 IMPLIES
+      union(difference(A, X), Y) =
+        union(difference(union(difference(A, singleton_ms(a)), ms_below(Y, a)),
+                         difference(X, singleton_ms(a))),
+              ms_above(Y, a))
+
+  ms_split_subset : LEMMA
+    FORALL (X, A, Y: finite_multiset, a: nat): subset(X, A) AND X(a) > 0 IMPLIES
+      subset(difference(X, singleton_ms(a)),
+             union(difference(A, singleton_ms(a)), ms_below(Y, a)))
+
+  ms_split_dom : LEMMA
+    FORALL (X, Y: finite_multiset, a: nat):
+      (FORALL y: member(y, Y) => EXISTS x: member(x, X) AND y < x) IMPLIES
+      (FORALL y: member(y, ms_above(Y, a)) =>
+         EXISTS x: member(x, difference(X, singleton_ms(a))) AND y < x)
+
+  ms_split_dom_empty : LEMMA
+    FORALL (X, Y: finite_multiset, a: nat):
+      (FORALL y: member(y, Y) => EXISTS x: member(x, X) AND y < x) AND
+      difference(X, singleton_ms(a)) = empty IMPLIES ms_above(Y, a) = empty
+
+  % Generalisation of ms_ord_subset_ms_ord_one_tc, by induction on X.
+  ms_ord_tc_aux : LEMMA
+    FORALL (X, A, B, Y: finite_multiset):
+      NOT X = empty AND subset(X, A) AND B = union(difference(A, X), Y) AND
+      (FORALL y: member(y, Y) => EXISTS x: member(x, X) AND y < x)
+      IMPLIES TC(ms_ord_one)(A, B)
+
+  ms_ord_subset_ms_ord_one_tc : COROLLARY
     subset?(ms_ord,TC(ms_ord_one))
 
   ms_ord_equal_ms_ord_one_tc : COROLLARY
