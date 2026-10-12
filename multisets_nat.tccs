@@ -107,12 +107,12 @@ multisets_nat_TCCS: THEORY BEGIN
 	ms_ord_one_step_TCC1: OBLIGATION
 	FORALL (A, Y: finite_multiset, a: nat): A(a) > 0 IMPLIES is_finite(union(difference(A, singleton_ms(a)), ms_below(Y, a)))
 	
-	% Subtype TCC generated (at line 303, column 32) for  union(m, p)
+	% Subtype TCC generated (at line 310, column 32) for  union(m, p)
 	    % expected type  finite_multiset
 	ms_ord_union_monotone_TCC1: OBLIGATION
 	FORALL (m, n, p: finite_multiset): ms_ord(m, n) IMPLIES is_finite(union(m, p))
 	
-	% Subtype TCC generated (at line 303, column 44) for  union(n, p)
+	% Subtype TCC generated (at line 310, column 44) for  union(n, p)
 	    % expected type  finite_multiset
 	ms_ord_union_monotone_TCC2: OBLIGATION
 	FORALL (m, n, p: finite_multiset): ms_ord(m, n) IMPLIES is_finite(union(n, p))

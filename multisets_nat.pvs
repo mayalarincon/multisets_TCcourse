@@ -282,13 +282,20 @@ card_ms(m:finite_multiset) : RECURSIVE nat =
     subset?(TC(ms_ord_one), TC(ms_ord))
 
   ms_ord_one_subset_rtc: LEMMA
-    subset?(RTC(ms_ord_one),  = o ms_ord)
+    subset?(RTC(ms_ord_one), RC(ms_ord))
+
+
+  % max of a finite set of naturals, used in ms_ord_irreflexive
+  IMPORTING finite_sets@finite_sets_minmax[nat, <=]
+
+  ms_ord_irreflexive: LEMMA
+    FORALL (m: finite_multiset):
+      NOT ms_ord(m, m)
 
 
 %% Lemma 7.3.11
 % ITEM (B)
-ms_ord_U_eq_poset: CONJECTURE partial_order?(union(ms_ord, =)) 
-
+ms_ord_U_eq_poset: LEMMA partial_order?(RC(ms_ord)) 
 
 %% Lema 7.3.11
 %  ITEM (c)
@@ -302,32 +309,26 @@ ms_ord_U_eq_poset: CONJECTURE partial_order?(union(ms_ord, =))
    FORALL(m,n,p:finite_multiset) :
      ms_ord(m,n) IMPLIES ms_ord(union(m,p), union(n,p))
 
+  % If m exceeds n at a, and they agree on every element above a,
+  % then m is above n in the multiset ordering (used in ms_ord_total_order)
+  ms_ord_max_diff: LEMMA
+    FORALL (m, n: finite_multiset, a: nat):
+      m(a) > n(a) AND (FORALL y: y > a => m(y) = n(y)) IMPLIES ms_ord(m, n)
 
-
-
-  ms_ord_singleton_w_rep: CONJECTURE
-    FORALL (x, y: nat, nx, ny: nat):
-      ms_ord(singleton_w_rep(x, nx), singleton_w_rep(y, ny)) <=>
-        ((x = y AND nx > ny) OR (x > y AND nx > 0))
-
-  finite_set_nat_max: LEMMA
-    FORALL (s: finite_set[nat]):
-      NOT empty?(s) => EXISTS (n: nat): member(n, s) AND (FORALL (i: nat): member(i, s) => i <= n)
-
-  ms_max: LEMMA
-    FORALL (m: finite_multiset):
-      m /= empty => EXISTS (n: nat): m(n) > 0 AND (FORALL (i: nat): m(i) > 0 => i <= n)
+%% Lema 7.3.11
+%% ITEM (e)
+%% Indeed, this lemma, for a well-order geq over 
+%% and non-interpreted type is an implication:
+%% total_order?(geq) IMPLIES total_order?(ms_ord)
+ ms_ord_total_order : LEMMA 
+     total_order?(RC(ms_ord)) 
+   
 
   ms_ord_empty: LEMMA
     FORALL (m: finite_multiset):
       NOT m = empty => ms_ord(m, empty)
 
 
-  ms_ord_irreflexive: LEMMA
-    FORALL (m: finite_multiset):
-      NOT ms_ord(m, m)
-
- 
   ms_ord_well_founded: CONJECTURE
     well_founded?[finite_multiset](ms_ord)
 
