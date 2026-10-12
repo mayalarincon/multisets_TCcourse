@@ -433,7 +433,7 @@
       NIL))
     NIL)
    NIL SHOSTAK
-   (|domain| SUBTYPE "{n: nat | m(n) > 0}" "finite_set[nat]" (99 48 99 69)))
+   (|domain| SUBTYPE "{n: nat | m(n) > 0}" "finite_set[nat]" (100 48 100 69)))
   (|domain_TCC1-1| NIL 3997831062 ("" (SUBTYPE-TCC) NIL NIL)
    ((|finite_set| TYPE-EQ-DECL NIL |finite_sets| NIL)
     (> CONST-DECL "bool" |reals| NIL) (|set| TYPE-EQ-DECL NIL |sets| NIL)
@@ -461,7 +461,7 @@
     (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
     (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL))
    NIL
-   (|domain| SUBTYPE "{n: nat | m(n) > 0}" "finite_set[nat]" (99 48 99 69))))
+   (|domain| SUBTYPE "{n: nat | m(n) > 0}" "finite_set[nat]" (100 48 100 69))))
  (|singleton_ms_TCC1| 0
   (|singleton_ms_TCC1-2| "" 4000760541
    ("" (SKEEP)
@@ -481,7 +481,7 @@
     NIL)
    NIL SHOSTAK
    (|singleton_ms| SUBTYPE "(LAMBDA y: IF x = y THEN 1 ELSE 0 ENDIF)"
-    "finite_multiset" (101 43 101 81)))
+    "finite_multiset" (102 43 102 81)))
   (|singleton_ms_TCC1-1| NIL 3997831062 ("" (SUBTYPE-TCC) NIL NIL)
    ((|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
     (|empty?| CONST-DECL "bool" |sets| NIL)
@@ -510,7 +510,7 @@
     (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL))
    NIL
    (|singleton_ms| SUBTYPE "(LAMBDA y: IF x = y THEN 1 ELSE 0 ENDIF)"
-    "finite_multiset" (101 43 101 81))))
+    "finite_multiset" (102 43 102 81))))
  (|union_fin_ms_is_fin_ms| 0
   (|union_fin_ms_is_fin_ms-1| |nil| 3998342657
    ("" (SKEEP)
@@ -843,7 +843,7 @@
     NIL)
    NIL SHOSTAK
    (|singleton_w_rep| SUBTYPE "(LAMBDA y: IF x = y THEN n ELSE 0 ENDIF)"
-    "finite_multiset" (116 54 116 92)))
+    "finite_multiset" (117 54 117 92)))
   (|singleton_w_rep_TCC1-1| NIL 3997831062 ("" (SUBTYPE-TCC) NIL NIL)
    ((|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
     (|empty?| CONST-DECL "bool" |sets| NIL)
@@ -872,7 +872,7 @@
     (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL))
    NIL
    (|singleton_w_rep| SUBTYPE "(LAMBDA y: IF x = y THEN n ELSE 0 ENDIF)"
-    "finite_multiset" (116 54 116 92))))
+    "finite_multiset" (117 54 117 92))))
  (|subset_ms_subset_dom| 0
   (|subset_ms_subset_dom-2| "" 4000310508
    ("" (SKEEP)
@@ -970,7 +970,7 @@
     NIL)
    NIL SHOSTAK
    (|subset_ms_subset_diff_singl| SUBTYPE "domain(m)" "(sets[nat].nonempty?)"
-    (124 48 124 57)))
+    (125 48 125 57)))
   (|subset_ms_subset_diff_singl_TCC1-1| NIL 3999604636
    ("" (SUBTYPE-TCC) NIL NIL)
    ((|empty?| CONST-DECL "bool" |sets| NIL)
@@ -1000,7 +1000,7 @@
     (|nonempty?| CONST-DECL "bool" |sets| NIL))
    NIL
    (|subset_ms_subset_diff_singl| SUBTYPE "domain(m)" "(sets[nat].nonempty?)"
-    (124 48 124 57))))
+    (125 48 125 57))))
  (|subset_ms_subset_diff_singl| 0
   (|subset_ms_subset_diff_singl-2| "" 4000310637
    ("" (SKEEP)
@@ -1050,7 +1050,7 @@
     NIL)
    NIL SHOSTAK
    (|dom_diff_w_rep| SUBTYPE "difference(m, singleton_w_rep(a, m(a)))"
-    "finite_multiset" (130 11 130 50)))
+    "finite_multiset" (131 11 131 50)))
   (|dom_diff_w_rep_TCC1-1| NIL 4000310967 ("" (SUBTYPE-TCC) NIL NIL)
    ((|singleton_w_rep| CONST-DECL "finite_multiset" |multisets_nat| NIL)
     (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
@@ -1072,7 +1072,7 @@
     (|difference_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
    NIL
    (|dom_diff_w_rep| SUBTYPE "difference(m, singleton_w_rep(a, m(a)))"
-    "finite_multiset" (130 11 130 50))))
+    "finite_multiset" (131 11 131 50))))
  (|dom_diff_w_rep| 0
   (|dom_diff_w_rep-0| "" 4000310973
    ("" (SKEEP)
@@ -1171,7 +1171,7 @@
         NIL))
       NIL))
     NIL)
-   NIL SHOSTAK (|occurrences| SUBTYPE "mp" "finite_multiset" (139 23 139 25)))
+   NIL SHOSTAK (|occurrences| SUBTYPE "mp" "finite_multiset" (140 23 140 25)))
   (|occurrences_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL)
    ((|domain| CONST-DECL "finite_set[nat]" |multisets_nat| NIL)
     (|finite_set| TYPE-EQ-DECL NIL |finite_sets| NIL)
@@ -1195,7 +1195,7 @@
     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
     (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
     (|difference_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
-   NIL (|occurrences| SUBTYPE "mp" "finite_multiset" (139 23 139 25))))
+   NIL (|occurrences| SUBTYPE "mp" "finite_multiset" (140 23 140 25))))
  (|occurrences_TCC2| 0
   (|occurrences_TCC2-0| "" 4000310986
    ("" (SKEEP)
@@ -1212,7 +1212,7 @@
     NIL)
    NIL SHOSTAK
    (|occurrences| TERMINATION "occurrences(mp)" #A((3) BASE-CHAR . "NIL")
-    (139 11 139 26)))
+    (140 11 140 26)))
   (|occurrences_TCC2-1| NIL 3999604636 ("" (TERMINATION-TCC) NIL NIL)
    ((|card_dom_diff_w_rep| FORMULA-DECL NIL |multisets_nat| NIL)
     (|real_lt_is_strict_total_order| NAME-JUDGEMENT
@@ -1242,7 +1242,7 @@
     (|domain| CONST-DECL "finite_set[nat]" |multisets_nat| NIL))
    NIL
    (|occurrences| TERMINATION "occurrences(mp)" #A((3) BASE-CHAR . "NIL")
-    (139 11 139 26))))
+    (140 11 140 26))))
  (|occurrences_TCC3| 0
   (|occurrences_TCC3-0| "" 4000310993
    ("" (SKEEP)
@@ -1260,7 +1260,7 @@
       NIL))
     NIL)
    NIL SHOSTAK
-   (|occurrences| SUBTYPE "domain(m)" "(sets[nat].nonempty?)" (137 26 137 35)))
+   (|occurrences| SUBTYPE "domain(m)" "(sets[nat].nonempty?)" (138 26 138 35)))
   (|occurrences_TCC3-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL)
    ((|empty?| CONST-DECL "bool" |sets| NIL)
     (|member| CONST-DECL "bool" |sets| NIL)
@@ -1287,7 +1287,7 @@
     (|nonempty?| CONST-DECL "bool" |sets| NIL))
    NIL
    (|occurrences| SUBTYPE "domain(m)" "(sets[nat].nonempty?)"
-    (137 26 137 35))))
+    (138 26 138 35))))
  (|occ_remove_any| 0
   (|occ_remove_any-2| "" 4000759900
    ("" (MEASURE-INDUCT+ "card(domain(m))" ("m"))
@@ -1615,7 +1615,7 @@
     NIL)
    NIL SHOSTAK
    (|occ_remove_one| SUBTYPE "difference(m, singleton_ms(a))" "finite_multiset"
-    (148 37 148 67)))
+    (149 37 149 67)))
   (|occ_remove_one_TCC1-1| NIL 4000310967 ("" (SUBTYPE-TCC) NIL NIL)
    ((|singleton_ms| CONST-DECL "finite_multiset" |multisets_nat| NIL)
     (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
@@ -1637,7 +1637,7 @@
     (|difference_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
    NIL
    (|occ_remove_one| SUBTYPE "difference(m, singleton_ms(a))" "finite_multiset"
-    (148 37 148 67))))
+    (149 37 149 67))))
  (|occ_remove_one| 0
   (|occ_remove_one-0| "" 4000759902
    ("" (SKEEP)
@@ -1969,7 +1969,7 @@
       NIL))
     NIL)
    NIL SHOSTAK
-   (|occ_union| SUBTYPE "union(m, n)" "finite_multiset" (154 16 154 27)))
+   (|occ_union| SUBTYPE "union(m, n)" "finite_multiset" (155 16 155 27)))
   (|occ_union_TCC1-1| NIL 4000313363 ("" (SUBTYPE-TCC) NIL NIL)
    ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
@@ -1988,7 +1988,7 @@
     (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
     (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
     (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
-   NIL (|occ_union| SUBTYPE "union(m, n)" "finite_multiset" (154 16 154 27))))
+   NIL (|occ_union| SUBTYPE "union(m, n)" "finite_multiset" (155 16 155 27))))
  (|occ_union| 0
   (|occ_union-0| "" 4000759905
    ("" (MEASURE-INDUCT+ "occurrences(m)" ("m"))
@@ -2376,7 +2376,7 @@
         NIL))
       NIL))
     NIL)
-   NIL SHOSTAK (|card_ms| SUBTYPE "mp" "finite_multiset" (160 16 160 18)))
+   NIL SHOSTAK (|card_ms| SUBTYPE "mp" "finite_multiset" (161 16 161 18)))
   (|card_ms_TCC2-0| "" 4000311152
    ("" (SKEEP)
     (("" (SKEEP)
@@ -2411,7 +2411,7 @@
     (|finite_set| TYPE-EQ-DECL NIL |finite_sets| NIL)
     (|domain| CONST-DECL "finite_set[nat]" |multisets_nat| NIL)
     (|difference_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
-   SHOSTAK (|card_ms| SUBTYPE "mp" "finite_multiset" (160 16 160 18)))
+   SHOSTAK (|card_ms| SUBTYPE "mp" "finite_multiset" (161 16 161 18)))
   (|card_ms_TCC2-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL)
    ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
@@ -2435,7 +2435,7 @@
     (|finite_set| TYPE-EQ-DECL NIL |finite_sets| NIL)
     (|domain| CONST-DECL "finite_set[nat]" |multisets_nat| NIL)
     (|difference_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
-   NIL (|card_ms| SUBTYPE "mp" "finite_multiset" (160 16 160 18))))
+   NIL (|card_ms| SUBTYPE "mp" "finite_multiset" (161 16 161 18))))
  (|card_ms_TCC2| 0
   (|card_ms_TCC2-2| "" 4000312864
    ("" (SKEEP)
@@ -2452,7 +2452,7 @@
     NIL)
    NIL SHOSTAK
    (|card_ms| TERMINATION "card_ms(mp)" #A((3) BASE-CHAR . "NIL")
-    (160 8 160 19)))
+    (161 8 161 19)))
   (|card_ms_TCC3-1| NIL 3999604636 ("" (TERMINATION-TCC) NIL NIL)
    ((|real_gt_is_strict_total_order| NAME-JUDGEMENT
      "(strict_total_order?[real])" |real_props| NIL)
@@ -2482,7 +2482,7 @@
     (|domain| CONST-DECL "finite_set[nat]" |multisets_nat| NIL))
    NIL
    (|card_ms| TERMINATION "card_ms(mp)" #A((3) BASE-CHAR . "NIL")
-    (160 8 160 19))))
+    (161 8 161 19))))
  (|occ_eq_card_ms| 0
   (|occ_eq_card_ms-3| "" 4000759905
    ("" (MEASURE-INDUCT+ "occurrences(m)" ("m"))
@@ -2708,14 +2708,14 @@
  (|card_empty_ms_TCC1| 0
   (|card_empty_ms_TCC1-2| "" 4000759947
    ("" (LEMMA "empty_is_finite") (("" (PROPAX) NIL NIL)) NIL) NIL SHOSTAK
-   (|card_empty_ms| SUBTYPE "empty" "finite_multiset" (166 32 166 37)))
+   (|card_empty_ms| SUBTYPE "empty" "finite_multiset" (167 32 167 37)))
   (|card_empty_ms_TCC1-0| "" 4000313026
    ("" (LEMMA "empty_is_finite") (("" (PROPAX) NIL NIL)) NIL)
    ((|empty_is_finite| FORMULA-DECL NIL |multisets_nat| NIL)) SHOSTAK
-   (|card_empty_ms| SUBTYPE "empty" "finite_multiset" (166 32 166 37)))
+   (|card_empty_ms| SUBTYPE "empty" "finite_multiset" (167 32 167 37)))
   (|card_empty_ms_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL)
    ((|empty_is_finite| FORMULA-DECL NIL |multisets_nat| NIL)) NIL
-   (|card_empty_ms| SUBTYPE "empty" "finite_multiset" (166 32 166 37))))
+   (|card_empty_ms| SUBTYPE "empty" "finite_multiset" (167 32 167 37))))
  (|card_empty_ms| 0
   (|card_empty_ms-2| "" 4000759906
    ("" (EXPAND "card_ms") (("" (PROPAX) NIL NIL)) NIL) NIL SHOSTAK)
@@ -3288,7 +3288,7 @@
     NIL)
    NIL SHOSTAK
    (|card_difference_ms| SUBTYPE "difference(m, n)" "finite_multiset"
-    (180 14 180 29)))
+    (181 14 181 29)))
   (|card_difference_ms_TCC1-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL)
    ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
@@ -3309,7 +3309,7 @@
     (|difference_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
    NIL
    (|card_difference_ms| SUBTYPE "difference(m, n)" "finite_multiset"
-    (180 14 180 29))))
+    (181 14 181 29))))
  (|card_difference_ms_TCC2| 0
   (|card_difference_ms_TCC2-0| "" 4000313592
    ("" (SKEEP)
@@ -3318,7 +3318,7 @@
     NIL)
    NIL SHOSTAK
    (|card_difference_ms| SUBTYPE "intersection(m, n)" "finite_multiset"
-    (180 54 180 71)))
+    (181 54 181 71)))
   (|card_difference_ms_TCC2-1| NIL 3999604636 ("" (SUBTYPE-TCC) NIL NIL)
    ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
@@ -3339,7 +3339,7 @@
     (|intersection_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
    NIL
    (|card_difference_ms| SUBTYPE "intersection(m, n)" "finite_multiset"
-    (180 54 180 71))))
+    (181 54 181 71))))
  (|card_difference_ms| 0
   (|card_difference_ms-0| "" 4000313597
    ("" (SKEEP)
@@ -3447,7 +3447,7 @@
  (|difference_singleton_w_rep_TCC1| 0
   (|difference_singleton_w_rep_TCC1-0| "" 4000759949 ("" (SUBTYPE-TCC) NIL NIL)
    NIL SHOSTAK
-   (|difference_singleton_w_rep| SUBTYPE "n - m" "nat" (193 86 193 91)))
+   (|difference_singleton_w_rep| SUBTYPE "n - m" "nat" (194 86 194 91)))
   (|difference_singleton_w_rep_TCC1-1| NIL 3997831062
    ("" (SUBTYPE-TCC) NIL NIL)
    ((|int_minus_int_is_int| APPLICATION-JUDGEMENT "int" |integers| NIL)
@@ -3467,7 +3467,7 @@
     (NOT CONST-DECL "[bool -> bool]" |booleans| NIL)
     (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL))
-   NIL (|difference_singleton_w_rep| SUBTYPE "n - m" "nat" (193 86 193 91))))
+   NIL (|difference_singleton_w_rep| SUBTYPE "n - m" "nat" (194 86 194 91))))
  (|difference_singleton_w_rep| 0
   (|difference_singleton_w_rep-2| "" 4000760217
    ("" (SKEEP)
@@ -4575,7 +4575,7 @@
     NIL)
    NIL SHOSTAK
    (|ms_below| SUBTYPE "LAMBDA (z: nat): IF z < a THEN Y(z) ELSE 0 ENDIF"
-    "finite_multiset" (232 4 232 52)))
+    "finite_multiset" (233 4 233 52)))
   (|ms_below_TCC1-0| "" 4000314301
    ("" (SKEEP)
     (("" (LEMMA "subset_fin_ms_is_fin_ms")
@@ -4621,7 +4621,7 @@
     (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL))
    SHOSTAK
    (|ms_below| SUBTYPE "LAMBDA (z: nat): IF z < a THEN Y(z) ELSE 0 ENDIF"
-    "finite_multiset" (232 4 232 52)))
+    "finite_multiset" (233 4 233 52)))
   (|ms_below_TCC1-1| NIL 4000314301 ("" (SUBTYPE-TCC) NIL NIL)
    ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
@@ -4652,7 +4652,7 @@
     (|subset_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
    NIL
    (|ms_below| SUBTYPE "LAMBDA (z: nat): IF z < a THEN Y(z) ELSE 0 ENDIF"
-    "finite_multiset" (232 4 232 52))))
+    "finite_multiset" (233 4 233 52))))
  (|ms_above_TCC1| 0
   (|ms_above_TCC1-2| "" 4000759951
    ("" (SKEEP)
@@ -4672,7 +4672,7 @@
     NIL)
    NIL SHOSTAK
    (|ms_above| SUBTYPE "LAMBDA (z: nat): IF z < a THEN 0 ELSE Y(z) ENDIF"
-    "finite_multiset" (235 4 235 52)))
+    "finite_multiset" (236 4 236 52)))
   (|ms_above_TCC1-0| "" 4000314305
    ("" (SKEEP)
     (("" (LEMMA "subset_fin_ms_is_fin_ms")
@@ -4718,7 +4718,7 @@
     (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL))
    SHOSTAK
    (|ms_above| SUBTYPE "LAMBDA (z: nat): IF z < a THEN 0 ELSE Y(z) ENDIF"
-    "finite_multiset" (235 4 235 52)))
+    "finite_multiset" (236 4 236 52)))
   (|ms_above_TCC1-1| NIL 4000314301 ("" (SUBTYPE-TCC) NIL NIL)
    ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
@@ -4749,7 +4749,7 @@
     (|subset_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
    NIL
    (|ms_above| SUBTYPE "LAMBDA (z: nat): IF z < a THEN 0 ELSE Y(z) ENDIF"
-    "finite_multiset" (235 4 235 52))))
+    "finite_multiset" (236 4 236 52))))
  (|ms_ord_one_step_TCC1| 0
   (|ms_ord_one_step_TCC1-0| "" 4000759951
    ("" (SKEEP*)
@@ -4765,7 +4765,7 @@
    NIL SHOSTAK
    (|ms_ord_one_step| SUBTYPE
     "union(difference(A, singleton_ms(a)), ms_below(Y, a))" "finite_multiset"
-    (240 20 240 73)))
+    (241 20 241 73)))
   (|ms_ord_one_step_TCC1-1| NIL 4000318643
    (""
     (THEN (SKEEP*) (LEMMA "difference_fin_ms_is_fin_ms")
@@ -4797,7 +4797,7 @@
    NIL
    (|ms_ord_one_step| SUBTYPE
     "union(difference(A, singleton_ms(a)), ms_below(Y, a))" "finite_multiset"
-    (240 20 240 73))))
+    (241 20 241 73))))
  (|ms_ord_one_step| 0
   (|ms_ord_one_step-0| "" 4000759920
    ("" (SKEEP)
@@ -9959,7 +9959,7 @@
     NIL)
    NIL SHOSTAK
    (|ms_ord_union_monotone| SUBTYPE "union(m, p)" "finite_multiset"
-    (310 32 310 42)))
+    (311 32 311 42)))
   (|ms_ord_union_monotone_TCC1-1| NIL 3999171256 ("" (SUBTYPE-TCC) NIL NIL)
    ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
@@ -9980,7 +9980,7 @@
     (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
    NIL
    (|ms_ord_union_monotone| SUBTYPE "union(m, p)" "finite_multiset"
-    (310 32 310 42))))
+    (311 32 311 42))))
  (|ms_ord_union_monotone_TCC2| 0
   (|ms_ord_union_monotone_TCC2-2| "" 4000760786
    ("" (SKEEP)
@@ -9989,7 +9989,7 @@
     NIL)
    NIL SHOSTAK
    (|ms_ord_union_monotone| SUBTYPE "union(n, p)" "finite_multiset"
-    (310 44 310 54)))
+    (311 44 311 54)))
   (|ms_ord_union_monotone_TCC2-1| NIL 3999171256 ("" (SUBTYPE-TCC) NIL NIL)
    ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
     (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
@@ -10010,7 +10010,7 @@
     (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
    NIL
    (|ms_ord_union_monotone| SUBTYPE "union(n, p)" "finite_multiset"
-    (310 44 310 54))))
+    (311 44 311 54))))
  (|ms_ord_union_monotone| 0
   (|ms_ord_union_monotone-0| "" 4000745993
    ("" (SKEEP)
@@ -10152,7 +10152,7 @@
     NIL)
    NIL SHOSTAK)
   (|ms_ord_max_diff-1| NIL 4000760903 ("" (POSTPONE) NIL NIL)
-   (NIL NIL (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+   ((|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
     (|difference| CONST-DECL "multiset" |multisets_nat| NIL)
     (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
     (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
@@ -10315,8 +10315,6 @@
     (|finite_subset| FORMULA-DECL NIL |finite_sets| NIL)
     (|subset?| CONST-DECL "bool" |sets| NIL)
     (|domain| CONST-DECL "finite_set[nat]" |multisets_nat| NIL)
-    (|finite_union| APPLICATION-JUDGEMENT "finite_set[nat]" |multisets_nat|
-     NIL)
     (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
     (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
     (= CONST-DECL "[T, T -> boolean]" |equalities| NIL)
@@ -10380,5 +10378,506 @@
     (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
     (|empty| CONST-DECL "multiset" |multisets_nat| NIL)
     (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL))
+   SHOSTAK))
+ (|ms_acc_noetherian| 0
+  (|ms_acc_noetherian-1| NIL 4000808479
+   (""
+    (THEN (FLATTEN) (EXPAND "noetherian?") (EXPAND "well_founded?")
+     (SKOLEM 1 "S") (FLATTEN) (SKOLEM -2 "y0") (LEMMA "ms_acc_weak_induction")
+     (INST -1
+      "LAMBDA (M: finite_multiset): S(M) IMPLIES EXISTS (y: (S)): FORALL (x: (S)): NOT converse(ms_ord_one)(x, y)")
+     (SPREAD (SPLIT -1)
+      ((THEN (INST -1 "y0") (INST -2 "y0") (ASSERT))
+       (THEN (HIDE-ALL-BUT 1) (SKOLEM 1 "M") (FLATTEN)
+        (SPREAD (CASE "EXISTS (x: (S)): ms_ord_one(M, x)")
+         ((THEN (SKOLEM -1 "x") (INST -2 "x") (ASSERT))
+          (THEN (INST 2 "M") (SKOLEM 2 "x") (EXPAND "converse") (INST 1 "x")
+           (ASSERT))))))))
+    NIL)
+   ((|well_founded?| CONST-DECL "bool" |orders| NIL)
+    (|ms_acc_weak_induction| FORMULA-DECL NIL |multisets_nat| NIL) NIL NIL
+    (|ms_ord_one| CONST-DECL "bool" |multisets_nat| NIL)
+    (|converse| CONST-DECL "pred[[T2, T1]]" |relation_defs| NIL)
+    (NOT CONST-DECL "[bool -> bool]" |booleans| NIL)
+    (|pred| TYPE-EQ-DECL NIL |defined_types| NIL)
+    (IMPLIES CONST-DECL "[bool, bool -> bool]" |booleans| NIL)
+    (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+    (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (>= CONST-DECL "bool" |reals| NIL)
+    (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+    (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+    (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+    (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+    (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+    (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+    (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+    (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+    (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+    (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+    (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+    (|noetherian?| CONST-DECL "bool" |noetherian| TRS))
+   SHOSTAK))
+ (|ms_union_singl_diff| 0
+  (|ms_union_singl_diff-1| NIL 4000808479
+   (""
+    (THEN (SKEEP) (APPLY-EXTENSIONALITY 1 :HIDE? T) (EXPAND "union")
+     (EXPAND "difference") (EXPAND "singleton_ms") (REPEAT (LIFT-IF)) (GROUND))
+    NIL)
+   ((|nnint_plus_nnint_is_nnint| APPLICATION-JUDGEMENT "nonneg_int" |integers|
+     NIL)
+    (|posint_plus_nnint_is_posint| APPLICATION-JUDGEMENT "posint" |integers|
+     NIL)
+    (|minus_nzint_is_nzint| APPLICATION-JUDGEMENT "nzint" |integers| NIL)
+    (|real_gt_is_strict_total_order| NAME-JUDGEMENT
+     "(strict_total_order?[real])" |real_props| NIL)
+    (|union| CONST-DECL "multiset" |multisets_nat| NIL)
+    (|difference| CONST-DECL "multiset" |multisets_nat| NIL)
+    (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+    (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|singleton_ms| CONST-DECL "finite_multiset" |multisets_nat| NIL)
+    (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (>= CONST-DECL "bool" |reals| NIL)
+    (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+    (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+    (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+    (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+    (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+    (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+    (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+    (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+    (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+    (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+    (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL))
+   SHOSTAK))
+ (|ms_union_singl_diff_neq| 0
+  (|ms_union_singl_diff_neq-1| NIL 4000808479
+   (""
+    (THEN (SKEEP) (APPLY-EXTENSIONALITY 2 :HIDE? T) (EXPAND "union")
+     (EXPAND "difference") (EXPAND "singleton_ms") (REPEAT (LIFT-IF)) (GROUND))
+    NIL)
+   ((|even_plus_even_is_even| APPLICATION-JUDGEMENT "even_int" |integers| NIL)
+    (|nnint_plus_nnint_is_nnint| APPLICATION-JUDGEMENT "nonneg_int" |integers|
+     NIL)
+    (NIL APPLICATION-JUDGEMENT "above(n)" |exp2| NIL)
+    (|plus_u8_u8| APPLICATION-JUDGEMENT "uint16" |integertypes| NIL)
+    (|odd_plus_even_is_odd| APPLICATION-JUDGEMENT "odd_int" |integers| NIL)
+    (|int_plus_int_is_int| APPLICATION-JUDGEMENT "int" |integers| NIL)
+    (|posint_plus_nnint_is_posint| APPLICATION-JUDGEMENT "posint" |integers|
+     NIL)
+    (|int_minus_int_is_int| APPLICATION-JUDGEMENT "int" |integers| NIL)
+    (|minus_nzint_is_nzint| APPLICATION-JUDGEMENT "nzint" |integers| NIL)
+    (|real_gt_is_strict_total_order| NAME-JUDGEMENT
+     "(strict_total_order?[real])" |real_props| NIL)
+    (|union| CONST-DECL "multiset" |multisets_nat| NIL)
+    (|difference| CONST-DECL "multiset" |multisets_nat| NIL)
+    (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+    (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|singleton_ms| CONST-DECL "finite_multiset" |multisets_nat| NIL)
+    (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (>= CONST-DECL "bool" |reals| NIL)
+    (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+    (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+    (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+    (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+    (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+    (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+    (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+    (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+    (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+    (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+    (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL))
+   SHOSTAK))
+ (|ms_union_split_one| 0
+  (|ms_union_split_one-1| NIL 4000808479
+   (""
+    (THEN (SKEEP) (APPLY-EXTENSIONALITY 1 :HIDE? T) (EXPAND "union")
+     (EXPAND "difference") (EXPAND "singleton_ms") (REPEAT (LIFT-IF)) (GROUND))
+    NIL)
+   ((|even_plus_even_is_even| APPLICATION-JUDGEMENT "even_int" |integers| NIL)
+    (NIL APPLICATION-JUDGEMENT "above(n)" |exp2| NIL)
+    (|posint_plus_nnint_is_posint| APPLICATION-JUDGEMENT "posint" |integers|
+     NIL)
+    (|plus_u8_u8| APPLICATION-JUDGEMENT "uint16" |integertypes| NIL)
+    (|odd_plus_even_is_odd| APPLICATION-JUDGEMENT "odd_int" |integers| NIL)
+    (|int_minus_int_is_int| APPLICATION-JUDGEMENT "int" |integers| NIL)
+    (|int_plus_int_is_int| APPLICATION-JUDGEMENT "int" |integers| NIL)
+    (|minus_nzint_is_nzint| APPLICATION-JUDGEMENT "nzint" |integers| NIL)
+    (|real_gt_is_strict_total_order| NAME-JUDGEMENT
+     "(strict_total_order?[real])" |real_props| NIL)
+    (|union| CONST-DECL "multiset" |multisets_nat| NIL)
+    (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+    (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|difference| CONST-DECL "multiset" |multisets_nat| NIL)
+    (|singleton_ms| CONST-DECL "finite_multiset" |multisets_nat| NIL)
+    (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (>= CONST-DECL "bool" |reals| NIL)
+    (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+    (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+    (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+    (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+    (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+    (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+    (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+    (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+    (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+    (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+    (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL))
+   SHOSTAK))
+ (|ms_acc_add_below_TCC1| 0
+  (|ms_acc_add_below_TCC1-1| NIL 4000808479
+   (""
+    (THEN (SKEEP) (LEMMA "union_fin_ms_is_fin_ms")
+     (INST -1 "M" "singleton_ms(b)") (ASSERT))
+    NIL)
+   ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+    (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+    (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+    (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+    (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+    (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+    (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+    (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+    (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+    (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+    (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+    (>= CONST-DECL "bool" |reals| NIL)
+    (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+    (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|singleton_ms| CONST-DECL "finite_multiset" |multisets_nat| NIL)
+    (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
+   NIL
+   (|ms_acc_add_below| SUBTYPE "union(M, singleton_ms(b))" "finite_multiset"
+    (367 44 367 69))))
+ (|ms_acc_add_below_TCC2| 0
+  (|ms_acc_add_below_TCC2-1| NIL 4000808479
+   (""
+    (THEN (SKEEP*) (LEMMA "union_fin_ms_is_fin_ms") (INST -1 "M" "Y") (ASSERT))
+    NIL)
+   ((TRUE CONST-DECL "bool" |booleans| NIL)
+    (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+    (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+    (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+    (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+    (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+    (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+    (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+    (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+    (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+    (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+    (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+    (>= CONST-DECL "bool" |reals| NIL)
+    (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+    (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
+   NIL
+   (|ms_acc_add_below| SUBTYPE "union(M, Y)" "finite_multiset"
+    (370 71 370 82))))
+ (|ms_acc_add_below| 0
+  (|ms_acc_add_below-1| NIL 4000808479
+   (""
+    (THEN (SKOLEM 1 "a") (FLATTEN) (LABEL "H" -1)
+     (SPREAD (MEASURE-INDUCT+ "occurrences(Y)" ("Y"))
+      ((THEN (SKOLEM 1 "M") (FLATTEN) (LABEL "IH" -1) (LABEL "bnd" -2)
+        (LABEL "accM" -3)
+        (SPREAD (CASE "x!1 = empty")
+         ((THEN (REPLACE -1 1) (REWRITE "union_empty_right") (PROPAX))
+          (SPREAD (CASE "EXISTS (b: nat): x!1(b) > 0")
+           ((THEN (SKOLEM -1 "b") (LABEL "yb" -1) (LEMMA "ms_union_split_one")
+             (INST -1 "M" "x!1" "b") (ASSERT) (REPLACE -1 2) (HIDE -1)
+             (SPREAD
+              (INST "H" "b" "union(M, difference(x!1, singleton_ms(b)))")
+              ((SPREAD (SPLIT "H")
+                ((PROPAX) (THEN (INST "bnd" "b") (EXPAND "member") (ASSERT))
+                 (SPREAD (INST "IH" "difference(x!1, singleton_ms(b))" "M")
+                  ((THEN (LEMMA "occ_remove_one") (INST -1 "x!1" "b") (ASSERT)
+                    (SPREAD
+                     (CASE
+                         "FORALL (y: nat): member(y, difference(x!1, singleton_ms(b))) => y < a")
+                     ((GROUND)
+                      (THEN (SKOLEM 1 "z") (FLATTEN) (INST "bnd" "z")
+                       (EXPAND "member") (EXPAND "difference")
+                       (EXPAND "singleton_ms") (LIFT-IF) (GROUND)))))
+                   (REWRITE "difference_fin_ms_is_fin_ms")))))
+               (THEN (LEMMA "difference_fin_ms_is_fin_ms")
+                (INST -1 "x!1" "singleton_ms(b)")
+                (LEMMA "union_fin_ms_is_fin_ms")
+                (INST -1 "M" "difference(x!1, singleton_ms(b))") (ASSERT)))))
+            (THEN (HIDE-ALL-BUT (1 2)) (APPLY-EXTENSIONALITY 2 :HIDE? T)
+             (EXPAND "empty") (INST 2 "x!2") (ASSERT)))))))
+       (THEN (REWRITE "union_fin_ms_is_fin_ms"))
+       (THEN (REWRITE "union_fin_ms_is_fin_ms")))))
+    NIL)
+   ((> CONST-DECL "bool" |reals| NIL) NIL
+    (|singleton_ms| CONST-DECL "finite_multiset" |multisets_nat| NIL) NIL
+    (|difference| CONST-DECL "multiset" |multisets_nat| NIL) NIL
+    (|int_minus_int_is_int| APPLICATION-JUDGEMENT "int" |integers| NIL)
+    (|posint_plus_nnint_is_posint| APPLICATION-JUDGEMENT "posint" |integers|
+     NIL)
+    (|minus_nzint_is_nzint| APPLICATION-JUDGEMENT "nzint" |integers| NIL)
+    (|real_lt_is_strict_total_order| NAME-JUDGEMENT
+     "(strict_total_order?[real])" |real_props| NIL)
+    (|occ_remove_one| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|difference_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|real_gt_is_strict_total_order| NAME-JUDGEMENT
+     "(strict_total_order?[real])" |real_props| NIL)
+    (|ms_union_split_one| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|union_empty_right| FORMULA-DECL NIL |multisets_nat| NIL)
+    (= CONST-DECL "[T, T -> boolean]" |equalities| NIL)
+    (|empty| CONST-DECL "multiset" |multisets_nat| NIL)
+    (|union| CONST-DECL "multiset" |multisets_nat| NIL)
+    (|ms_acc| INDUCTIVE-DECL "bool" |multisets_nat| NIL) NIL
+    (|member| CONST-DECL "bool" |multisets_nat| NIL)
+    (AND CONST-DECL "[bool, bool -> bool]" |booleans| NIL)
+    (IMPLIES CONST-DECL "[bool, bool -> bool]" |booleans| NIL)
+    (|wf_nat| FORMULA-DECL NIL |naturalnumbers| NIL)
+    (< CONST-DECL "bool" |reals| NIL)
+    (|occurrences| DEF-DECL "nat" |multisets_nat| NIL)
+    (|naturalnumber| TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+    (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (>= CONST-DECL "bool" |reals| NIL)
+    (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+    (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+    (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+    (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+    (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+    (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+    (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+    (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+    (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+    (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+    (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+    (|measure_induction| FORMULA-DECL NIL |measure_induction| NIL)
+    (|well_founded?| CONST-DECL "bool" |orders| NIL)
+    (|pred| TYPE-EQ-DECL NIL |defined_types| NIL))
+   SHOSTAK))
+ (|ms_acc_add_TCC1| 0
+  (|ms_acc_add_TCC1-1| NIL 4000808479
+   (""
+    (THEN (SKEEP) (LEMMA "union_fin_ms_is_fin_ms")
+     (INST -1 "M" "singleton_ms(a)") (ASSERT))
+    NIL)
+   ((|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+    (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+    (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+    (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+    (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+    (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+    (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+    (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+    (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+    (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+    (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+    (>= CONST-DECL "bool" |reals| NIL)
+    (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+    (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|singleton_ms| CONST-DECL "finite_multiset" |multisets_nat| NIL)
+    (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL))
+   NIL
+   (|ms_acc_add| SUBTYPE "union(M, singleton_ms(a))" "finite_multiset"
+    (376 31 376 56))))
+ (|ms_acc_add| 0
+  (|ms_acc_add-1| NIL 4000808479
+   (""
+    (SPREAD (MEASURE-INDUCT+ "a" ("a"))
+     ((THEN (LABEL "IHa" -1) (LEMMA "ms_acc_induction")
+       (SPREAD
+        (INST -1
+         "LAMBDA (M: finite_multiset): ms_acc(union(M, singleton_ms(x!1)))")
+        ((SPREAD (SPLIT -1)
+          ((PROPAX)
+           (THEN (SKOLEM 1 "M") (FLATTEN) (LABEL "SH" -1)
+            (SPREAD (CASE "ms_acc(M)")
+             ((THEN (LABEL "accM" -1) (EXPAND "ms_acc" 1) (SKOLEM 1 "K")
+               (FLATTEN) (EXPAND "ms_ord_one" -3) (SKOLEM -3 ("b" "Y"))
+               (FLATTEN) (LABEL "mb" -3) (LABEL "keq" -4) (LABEL "ybnd" -5)
+               (REPLACE "keq" 1)
+               (SPREAD (CASE "b = x!1")
+                ((THEN (REPLACE -1 :HIDE? T) (LEMMA "ms_union_singl_diff")
+                  (INST -1 "M" "Y" "x!1") (REPLACE -1 1) (HIDE -1)
+                  (LEMMA "ms_acc_add_below") (INST -1 "x!1")
+                  (SPREAD (SPLIT -1)
+                   ((THEN (INST -1 "Y" "M") (ASSERT))
+                    (THEN (SKOLEM 1 ("c" "MM")) (FLATTEN) (INST "IHa" "c" "MM")
+                     (ASSERT)))))
+                 (THEN (LEMMA "ms_union_singl_diff_neq")
+                  (INST -1 "M" "Y" "x!1" "b") (ASSERT) (REPLACE -1 2) (HIDE -1)
+                  (SPREAD
+                   (INST "SH" "union(difference(M, singleton_ms(b)), Y)")
+                   ((SPREAD (SPLIT "SH")
+                     ((THEN (FLATTEN) (ASSERT))
+                      (THEN (EXPAND "ms_ord_one" 1) (INST 1 "b" "Y")
+                       (EXPAND "member") (EXPAND "union")
+                       (EXPAND "singleton_ms") (GROUND))))
+                    (THEN (LEMMA "difference_fin_ms_is_fin_ms")
+                     (INST -1 "M" "singleton_ms(b)")
+                     (LEMMA "union_fin_ms_is_fin_ms")
+                     (INST -1 "difference(M, singleton_ms(b))" "Y")
+                     (ASSERT))))))))
+              (THEN (EXPAND "ms_acc" 1) (SKOLEM 1 "N") (FLATTEN)
+               (INST "SH" "N") (ASSERT)))))))
+         (THEN (SKOLEM 1 "M") (REWRITE "union_fin_ms_is_fin_ms")))))
+      (REWRITE "union_fin_ms_is_fin_ms") (REWRITE "union_fin_ms_is_fin_ms")))
+    NIL)
+   ((|pred| TYPE-EQ-DECL NIL |defined_types| NIL)
+    (|well_founded?| CONST-DECL "bool" |orders| NIL)
+    (|measure_induction| FORMULA-DECL NIL |measure_induction| NIL)
+    (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+    (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+    (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+    (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+    (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+    (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+    (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+    (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+    (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+    (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+    (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+    (>= CONST-DECL "bool" |reals| NIL)
+    (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (|naturalnumber| TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (< CONST-DECL "bool" |reals| NIL)
+    (|wf_nat| FORMULA-DECL NIL |naturalnumbers| NIL)
+    (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+    (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (IMPLIES CONST-DECL "[bool, bool -> bool]" |booleans| NIL)
+    (|ms_acc| INDUCTIVE-DECL "bool" |multisets_nat| NIL)
+    (|union| CONST-DECL "multiset" |multisets_nat| NIL)
+    (|singleton_ms| CONST-DECL "finite_multiset" |multisets_nat| NIL)
+    (AND CONST-DECL "[bool, bool -> bool]" |booleans| NIL)
+    (|ms_acc_induction| FORMULA-DECL NIL |multisets_nat| NIL)
+    (= CONST-DECL "[T, T -> boolean]" |equalities| NIL)
+    (|ms_union_singl_diff| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|ms_acc_add_below| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|real_lt_is_strict_total_order| NAME-JUDGEMENT
+     "(strict_total_order?[real])" |real_props| NIL)
+    NIL NIL NIL (|difference| CONST-DECL "multiset" |multisets_nat| NIL)
+    (|member| CONST-DECL "bool" |multisets_nat| NIL)
+    (|minus_nzint_is_nzint| APPLICATION-JUDGEMENT "nzint" |integers| NIL)
+    (|nnint_plus_nnint_is_nnint| APPLICATION-JUDGEMENT "nonneg_int" |integers|
+     NIL)
+    (|union_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|difference_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|ms_union_singl_diff_neq| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|ms_ord_one| CONST-DECL "bool" |multisets_nat| NIL) NIL)
+   SHOSTAK))
+ (|ms_acc_all| 0
+  (|ms_acc_all-1| NIL 4000808479
+   (""
+    (THEN (MEASURE-INDUCT+ "occurrences(M)" ("M")) (LABEL "IH" -1)
+     (SPREAD (CASE "x!1 = empty")
+      ((THEN (REPLACE -1 1) (HIDE-ALL-BUT 1) (EXPAND "ms_acc" 1) (SKOLEM 1 "N")
+        (FLATTEN) (EXPAND "ms_ord_one" -1) (SKOLEM -1 ("c" "Y")) (FLATTEN)
+        (EXPAND "member" -1) (EXPAND "empty" -1) (ASSERT))
+       (SPREAD (CASE "EXISTS (b: nat): x!1(b) > 0")
+        ((THEN (SKOLEM -1 "b") (LABEL "xb" -1) (LEMMA "empty_is_finite")
+          (LEMMA "ms_union_split_one") (INST -1 "empty" "x!1" "b") (ASSERT)
+          (REWRITE "union_empty_left" -1) (REWRITE "union_empty_left" -1)
+          (REPLACE -1 2) (HIDE -1) (LEMMA "difference_fin_ms_is_fin_ms")
+          (INST -1 "x!1" "singleton_ms(b)") (LEMMA "ms_acc_add")
+          (INST -1 "b" "difference(x!1, singleton_ms(b))")
+          (INST "IH" "difference(x!1, singleton_ms(b))")
+          (LEMMA "occ_remove_one") (INST -1 "x!1" "b") (ASSERT))
+         (THEN (HIDE-ALL-BUT (1 2)) (APPLY-EXTENSIONALITY 2 :HIDE? T)
+          (EXPAND "empty") (INST 2 "x!2") (ASSERT)))))))
+    NIL)
+   ((|pred| TYPE-EQ-DECL NIL |defined_types| NIL)
+    (|well_founded?| CONST-DECL "bool" |orders| NIL)
+    (|measure_induction| FORMULA-DECL NIL |measure_induction| NIL)
+    (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+    (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+    (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+    (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+    (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+    (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+    (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+    (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+    (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+    (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+    (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+    (>= CONST-DECL "bool" |reals| NIL)
+    (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+    (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|naturalnumber| TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (|occurrences| DEF-DECL "nat" |multisets_nat| NIL)
+    (< CONST-DECL "bool" |reals| NIL)
+    (|wf_nat| FORMULA-DECL NIL |naturalnumbers| NIL)
+    (|ms_acc| INDUCTIVE-DECL "bool" |multisets_nat| NIL)
+    (|empty| CONST-DECL "multiset" |multisets_nat| NIL)
+    (= CONST-DECL "[T, T -> boolean]" |equalities| NIL)
+    (|ms_ord_one| CONST-DECL "bool" |multisets_nat| NIL)
+    (|real_gt_is_strict_total_order| NAME-JUDGEMENT
+     "(strict_total_order?[real])" |real_props| NIL)
+    (|member| CONST-DECL "bool" |multisets_nat| NIL)
+    (|empty_is_finite| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|union_empty_left| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|difference_fin_ms_is_fin_ms| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|ms_acc_add| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|real_lt_is_strict_total_order| NAME-JUDGEMENT
+     "(strict_total_order?[real])" |real_props| NIL)
+    (|occ_remove_one| FORMULA-DECL NIL |multisets_nat| NIL) NIL NIL
+    (|singleton_ms| CONST-DECL "finite_multiset" |multisets_nat| NIL)
+    (|difference| CONST-DECL "multiset" |multisets_nat| NIL)
+    (|ms_union_split_one| FORMULA-DECL NIL |multisets_nat| NIL)
+    (> CONST-DECL "bool" |reals| NIL))
+   SHOSTAK))
+ (|ms_ord_one_noetherian| 0
+  (|ms_ord_one_noetherian-1| NIL 4000808479
+   ("" (THEN (LEMMA "ms_acc_noetherian") (LEMMA "ms_acc_all") (ASSERT)) NIL)
+   ((|ms_acc_noetherian| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|ms_acc_all| FORMULA-DECL NIL |multisets_nat| NIL))
+   SHOSTAK))
+ (|ms_ord_noetherian| 0
+  (|ms_ord_noetherian-1| NIL 4000807185
+   (""
+    (THEN (LEMMA "ms_ord_equal_ms_ord_one_tc") (REPLACE -1 1) (HIDE -1)
+     (LEMMA "R_is_Noet_iff_TC_is[finite_multiset]") (INST -1 "ms_ord_one")
+     (LEMMA "ms_ord_one_noetherian") (GROUND))
+    NIL NIL)
+   ((|ms_ord_equal_ms_ord_one_tc| FORMULA-DECL NIL |multisets_nat| NIL)
+    (PRED TYPE-EQ-DECL NIL |defined_types| NIL)
+    (|ms_ord_one| CONST-DECL "bool" |multisets_nat| NIL)
+    (|ms_ord_one_noetherian| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|finite_multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|is_finite| CONST-DECL "bool" |multisets_nat| NIL)
+    (|multiset| TYPE-EQ-DECL NIL |multisets_nat| NIL)
+    (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (>= CONST-DECL "bool" |reals| NIL)
+    (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+    (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+    (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+    (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+    (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+    (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+    (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+    (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+    (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+    (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+    (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+    (|R_is_Noet_iff_TC_is| FORMULA-DECL NIL |noetherian| TRS))
+   SHOSTAK))
+ (|ms_ord_well_founded| 0
+  (|ms_ord_well_founded-1| NIL 4000807185
+   ("" (THEN (LEMMA "ms_ord_noetherian") (EXPAND "noetherian?") (PROPAX)) NIL
+    NIL)
+   ((|ms_ord_noetherian| FORMULA-DECL NIL |multisets_nat| NIL)
+    (|noetherian?| CONST-DECL "bool" |noetherian| TRS))
    SHOSTAK)))
 

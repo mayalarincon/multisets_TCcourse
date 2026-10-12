@@ -1,4 +1,4 @@
-*** Processing theory multisets_nat (2026/10/11 23:38:06) -- (prove-theory "multisets_nat")
+*** Processing theory multisets_nat (2026/10/12 12:41:50) -- (prove-theory "multisets_nat")
 
 
  Proof summary for theory multisets_nat
@@ -87,5 +87,17 @@
     ms_ord_max_diff.......................proved - complete   [SHOSTAK](0.00 s)
     ms_ord_total_order....................proved - incomplete [SHOSTAK](0.00 s)
     ms_ord_empty..........................proved - complete   [SHOSTAK](0.00 s)
-    ms_ord_well_founded...................untried             [Untried]( n/a s)
-    Theory multisets_nat totals: 86 formulas, 85 attempted, 85 succeeded (0.01 s)
+    ms_acc_noetherian.....................proved - complete   [SHOSTAK](0.00 s)
+    ms_union_singl_diff...................proved - complete   [SHOSTAK](0.00 s)
+    ms_union_singl_diff_neq...............proved - complete   [SHOSTAK](0.00 s)
+    ms_union_split_one....................proved - complete   [SHOSTAK](0.00 s)
+    ms_acc_add_below_TCC1.................proved - complete   [SHOSTAK](0.00 s)
+    ms_acc_add_below_TCC2.................proved - complete   [SHOSTAK](0.00 s)
+    ms_acc_add_below......................proved - complete   [SHOSTAK](0.00 s)
+    ms_acc_add_TCC1.......................proved - complete   [SHOSTAK](0.00 s)
+    ms_acc_add............................proved - complete   [SHOSTAK](0.00 s)
+    ms_acc_all............................proved - complete   [SHOSTAK](0.00 s)
+    ms_ord_one_noetherian.................proved - complete   [SHOSTAK](0.00 s)
+    ms_ord_noetherian.....................proved - incomplete [SHOSTAK](0.00 s)
+    ms_ord_well_founded...................proved - incomplete [SHOSTAK](0.00 s)
+    Theory multisets_nat totals: 98 formulas, 98 attempted, 98 succeeded (0.01 s)

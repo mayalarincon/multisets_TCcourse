@@ -9899,14 +9899,39 @@
     "formula": "ms_ord_well_founded",
     "status": "unfinished",
     "prover": "PVS 8.1 (SBCL 2.4.8)",
-    "shasum": "4f20d470a5b448b71186d9625b8d1489953f67ff28dfba1dbdd528326bafd123"
+    "shasum": "4de6eef0b0150dee1608bbd5b000bf0cb2d985b7e7f4e9514c50f731f792d609"
    },
    "origin": ".prf",
    "proofTree": {
     "branch": "",
     "name": "ms_ord_well_founded",
     "type": "root",
-    "rules": []
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"well_founded?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"y\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
    }
   }
  ],

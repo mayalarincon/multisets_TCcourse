@@ -1,3 +1,38 @@
+%%-------------------------------------------------------------------------
+%% Theory multisets_nat
+%%
+%% Finite multisets over the natural numbers and the multiset ordering
+%% (Dershowitz-Manna). It includes:
+%%  - multisets as functions nat -> nat, with union, intersection,
+%%    difference, membership and inclusion, and their basic properties;
+%%  - finite multisets, their domain, and the counting functions
+%%    occurrences and card_ms;
+%%  - the multiset ordering ms_ord and its one-step version ms_ord_one,
+%%    with ms_ord = TC(ms_ord_one);
+%%  - properties of ms_ord, following Lemma 7.3.11 of the book by
+%%    Ayala-Rincón and de Moura (see References): irreflexivity,
+%%    transitivity, the reflexive closure is a total order, singleton
+%%    characterization and monotonicity w.r.t. union;
+%%  - termination: ms_ord_one and ms_ord are noetherian, proved through
+%%    an inductive accessibility predicate (ms_acc), hence
+%%    well_founded?(converse(ms_ord)).
+%%
+%% References:
+%%  - N. Dershowitz and Z. Manna. Proving termination with multiset
+%%    orderings. Communications of the ACM, 22(8):465-476, 1979.
+%%  - F. Baader and T. Nipkow. Term Rewriting and All That.
+%%    Cambridge University Press, 1998.
+%%  - M. Ayala-Rincón and F. L. C. de Moura. Princípios da Programação
+%%    Lógica e Funcional: o princípio de resolução e a teoria de
+%%    reescrita. EdUnB, 2014.
+%%
+%% Date    : October 12, 2026
+%% Author  : Mauricio Ayala-Rincón, IME/UFG
+%% Students: Arthur Trindade da Silva (Ciência da Computação/UFG)
+%%           Brian Matheus Rodrigues Ribeiro (Ciência da Computação/UFG)
+%%           Magno Martins da Silva (Matemática/UFG)
+%%-------------------------------------------------------------------------
+
 multisets_nat : THEORY
 BEGIN
 
@@ -91,7 +126,9 @@ BEGIN
 
   finite_multiset: TYPE = (is_finite)
 
-  IMPORTING TRS@relations_closure[finite_multiset]
+  % TRS@noetherian also imports TRS@relations_closure (TC, RC, RTC)
+  IMPORTING TRS@noetherian[finite_multiset]
+  
 
   % @QED empty_is_finite proved by arthur on Fri, 18 Sep 2026 14:52:17 GMT
   empty_is_finite: LEMMA is_finite(empty)
@@ -221,7 +258,7 @@ card_ms(m:finite_multiset) : RECURSIVE nat =
   ms_ord_one_subset_ms_ord: LEMMA 
     subset?(ms_ord_one,  ms_ord)
 
-%% Lema 7.3.11
+%% Lemma 7.3.11 [Ayala-Rincón and de Moura, 2014]
 %% ITEM (a)
   % @QED ms_ord_one_subset_tc proved by arthur on Mon, 21 Sep 2026 17:32:04 GMT
   ms_ord_one_subset_tc: LEMMA
@@ -293,16 +330,16 @@ card_ms(m:finite_multiset) : RECURSIVE nat =
       NOT ms_ord(m, m)
 
 
-%% Lemma 7.3.11
+%% Lemma 7.3.11 [Ayala-Rincón and de Moura, 2014]
 % ITEM (B)
 ms_ord_U_eq_poset: LEMMA partial_order?(RC(ms_ord)) 
 
-%% Lema 7.3.11
+%% Lemma 7.3.11 [Ayala-Rincón and de Moura, 2014]
 %  ITEM (c)
   ms_ord_singleton_iff_lt: LEMMA
     x > y IFF ms_ord(singleton_ms(x), singleton_ms(y)) 
 
-%% Lemma 7.3.11
+%% Lemma 7.3.11 [Ayala-Rincón and de Moura, 2014]
 % ITEM (d)
 
  ms_ord_union_monotone : LEMMA
@@ -315,7 +352,7 @@ ms_ord_U_eq_poset: LEMMA partial_order?(RC(ms_ord))
     FORALL (m, n: finite_multiset, a: nat):
       m(a) > n(a) AND (FORALL y: y > a => m(y) = n(y)) IMPLIES ms_ord(m, n)
 
-%% Lema 7.3.11
+%% Lemma 7.3.11 [Ayala-Rincón and de Moura, 2014]
 %% ITEM (e)
 %% Indeed, this lemma, for a well-order geq over 
 %% and non-interpreted type is an implication:
@@ -329,7 +366,61 @@ ms_ord_U_eq_poset: LEMMA partial_order?(RC(ms_ord))
       NOT m = empty => ms_ord(m, empty)
 
 
-  ms_ord_well_founded: CONJECTURE
-    well_founded?[finite_multiset](ms_ord)
+  % Termination of the multiset ordering.
+  % ms_ord(m, n) means that n is below m (ms_ord is a reduction relation),
+  % so well-foundedness is stated for its converse: noetherian?(R) is
+  % defined in TRS@noetherian as well_founded?(converse(R)).
+
+  % Accessible part of ms_ord_one: M is accessible when all its one-step
+  % successors are. Accessible elements start no infinite ms_ord_one chain.
+  ms_acc(M: finite_multiset): INDUCTIVE bool =
+    FORALL (N: finite_multiset): ms_ord_one(M, N) IMPLIES ms_acc(N)
+
+  % If every finite multiset is accessible, ms_ord_one is noetherian.
+  ms_acc_noetherian: LEMMA
+    (FORALL (M: finite_multiset): ms_acc(M)) IMPLIES noetherian?(ms_ord_one)
+
+  % Equations on multisets used in the accessibility proof
+  ms_union_singl_diff: LEMMA
+    FORALL (M, Y: finite_multiset, a: nat):
+      union(difference(union(M, singleton_ms(a)), singleton_ms(a)), Y) = union(M, Y)
+
+  ms_union_singl_diff_neq: LEMMA
+    FORALL (M, Y: finite_multiset, a, b: nat): b /= a IMPLIES
+      union(difference(union(M, singleton_ms(a)), singleton_ms(b)), Y) =
+        union(union(difference(M, singleton_ms(b)), Y), singleton_ms(a))
+
+  ms_union_split_one: LEMMA
+    FORALL (M, Y: finite_multiset, b: nat): Y(b) > 0 IMPLIES
+      union(M, Y) = union(union(M, difference(Y, singleton_ms(b))), singleton_ms(b))
+
+  % Adding elements below a preserves accessibility, provided that adding
+  % a single element below a does (induction on the occurrences of Y).
+  ms_acc_add_below: LEMMA
+    FORALL (a: nat):
+      (FORALL (b: nat, M: finite_multiset):
+         b < a AND ms_acc(M) IMPLIES ms_acc(union(M, singleton_ms(b))))
+      IMPLIES
+      FORALL (Y, M: finite_multiset):
+        (FORALL y: member(y, Y) => y < a) AND ms_acc(M) IMPLIES ms_acc(union(M, Y))
+
+  % Adding one element preserves accessibility (strong induction on a,
+  % then induction on the accessibility of M).
+  ms_acc_add: LEMMA
+    FORALL (a: nat, M: finite_multiset):
+      ms_acc(M) IMPLIES ms_acc(union(M, singleton_ms(a)))
+
+  ms_acc_all: LEMMA
+    FORALL (M: finite_multiset): ms_acc(M)
+
+  ms_ord_one_noetherian: LEMMA
+    noetherian?(ms_ord_one)
+
+  % Uses ms_ord = TC(ms_ord_one) and the library lemma R_is_Noet_iff_TC_is
+  ms_ord_noetherian: LEMMA
+    noetherian?(ms_ord)
+
+  ms_ord_well_founded: COROLLARY
+    well_founded?[finite_multiset](converse(ms_ord))
 
 END multisets_nat
