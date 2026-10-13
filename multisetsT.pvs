@@ -1,0 +1,396 @@
+%%-------------------------------------------------------------------------
+%% Theory multisetsT
+%%
+%% Finite multisets over an arbitrary (non-interpreted) type T, ordered
+%% by a Noetherian relation >, and the induced multiset ordering
+%% (Dershowitz-Manna). This theory generalizes multisetsN, where the
+%% elements are natural numbers ordered by the usual >.
+%% It includes:
+%%  - multisets as functions T -> nat, with union, intersection,
+%%    difference, membership and inclusion, and their basic properties;
+%%  - finite multisets, their domain, and the counting functions
+%%    occurrences and card_msT;
+%%  - the multiset ordering msT_gt?, written infix as m >> n, and its
+%%    one-step version msT_gt_one?, with >> = TC(msT_gt_one?);
+%%  - termination: if > is noetherian, then msT_gt_one? and >> are
+%%    noetherian too, proved through an inductive accessibility
+%%    predicate (msT_acc?), hence well_founded?(converse(>>)).
+%%
+%% The parameter > is a Noetherian strict order: there is no infinite
+%% chain x0 > x1 > x2 > ... (noetherian?(>), i.e.,
+%% well_founded?(converse(>))). The termination proof uses only
+%% noetherianity; transitivity of > is needed just for >> to be
+%% transitive, i.e., for TC(msT_gt_one?) to be included in >>.
+%%
+%% References:
+%%  - N. Dershowitz and Z. Manna. Proving termination with multiset
+%%    orderings. Communications of the ACM, 22(8):465-476, 1979.
+%%  - F. Baader and T. Nipkow. Term Rewriting and All That.
+%%    Cambridge University Press, 1998.
+%%  - M. Ayala-Rincón and F. L. C. de Moura. Princípios da Programação
+%%    Lógica e Funcional: o princípio de resolução e a teoria de
+%%    reescrita. EdUnB, 2014.
+%%
+%% Date      : October 13, 2026
+%% Authors   : Mauricio Ayala-Rincón, IME/UFG
+%%             Mariano Miguel Moscato, AMA/NASA LaRC
+%%             Nikson Bernardes Fernandes Ferreira, PPG Informática/UnB
+%% %% Students  : Arthur Trindade da Silva (Ciência da Computação/UFG)
+%%             Brian Matheus Rodrigues Ribeiro (Ciência da Computação/UFG)
+%%             Magno Martins da Silva (Matemática/UFG)
+%%-------------------------------------------------------------------------
+
+multisetsT[T: TYPE,
+           (IMPORTING TRS@noetherian[T])
+           >: {R: pred[[T, T]] | strict_order?(R) AND noetherian?(R)}] : THEORY
+BEGIN
+
+  % The parameter > is a Noetherian (strict) order on T.
+  gt_transitive: LEMMA
+    FORALL (x, y, z: T): x > y AND y > z IMPLIES x > z
+
+  % Noetherian induction on T: the parameter > is noetherian, i.e.,
+  % converse(>) is well-founded.
+  gt_induction: LEMMA
+    FORALL (P: pred[T]):
+      (FORALL (x: T): (FORALL (y: T): x > y IMPLIES P(y)) IMPLIES P(x))
+      IMPLIES (FORALL (x: T): P(x))
+
+  multisetT: TYPE = [T -> nat]
+
+  m, n, p: VAR multisetT
+  x, y: VAR T
+
+  empty_msT: multisetT = (LAMBDA x: 0)
+
+  count_msT(m)(x): nat = m(x)
+
+  add_msT(x, m): multisetT = m WITH [(x) := m(x) + 1]
+
+  union_msT(m, n): multisetT = (LAMBDA x: m(x) + n(x))
+
+  intersection_msT(m, n): multisetT = (LAMBDA x: min(m(x), n(x)))
+
+  difference_msT(m, n): multisetT = (LAMBDA x: IF m(x) > n(x) THEN m(x) - n(x) ELSE 0 ENDIF)
+
+  member_msT?(x, m): bool = m(x) > 0
+
+  subset_msT?(m, n): bool = FORALL x: m(x) <= n(x)
+
+  union_msT_empty_msT_left: LEMMA FORALL m: union_msT(empty_msT, m) = m
+
+  union_msT_empty_msT_right: LEMMA FORALL m: union_msT(m, empty_msT) = m
+
+  intersection_msT_empty_msT_left: LEMMA FORALL m: intersection_msT(empty_msT, m) = empty_msT
+
+  intersection_msT_empty_msT_right: LEMMA FORALL m: intersection_msT(m, empty_msT) = empty_msT
+
+  difference_msT_empty_msT_left: LEMMA FORALL m: difference_msT(empty_msT, m) = empty_msT
+
+  difference_msT_empty_msT_right: LEMMA FORALL m: difference_msT(m, empty_msT) = m
+
+  difference_msT_m_m_empty_msT: LEMMA FORALL m: difference_msT(m, m) = empty_msT
+
+  union_msT_comm: LEMMA
+    FORALL m, n: union_msT(m, n) = union_msT(n, m)
+
+  union_msT_assoc: LEMMA
+    FORALL m, n, p: union_msT(m, union_msT(n, p)) = union_msT(union_msT(m, n), p)
+
+  intersection_msT_comm: LEMMA
+    FORALL m, n: intersection_msT(m, n) = intersection_msT(n, m)
+
+  intersection_msT_assoc: LEMMA
+    FORALL m, n, p: intersection_msT(m, intersection_msT(n, p)) = intersection_msT(intersection_msT(m, n), p)
+
+  subset_msT_transitive: LEMMA
+   FORALL m, n, p: subset_msT?(m,n) AND subset_msT?(n,p) IMPLIES  subset_msT?(m,p)
+
+  subset_msT_union_msT:  LEMMA
+    FORALL m, n: subset_msT?(m, union_msT(m,n))
+
+  subset_msT_intersection_msT:  LEMMA
+    FORALL m, n: subset_msT?(intersection_msT(m,n), m)
+
+  subset_msT_difference_msT: LEMMA
+    FORALL m, n: subset_msT?(difference_msT(m,n), m)
+
+  subset_msT_m_m : LEMMA
+    FORALL m : subset_msT?(m,m)
+
+
+  % Baader & Nipkow multiset ordering
+  % M >> N iff there exist X, Y such that X is non-empty sub-multiset of M,
+  % N = (M - X) + Y, and for all y in Y, there is an x in X such that x > y.
+  % As in multisetsN, it is defined over finite multisets.
+
+  is_finite?(m): bool = EXISTS (S: set[T]): is_finite(S) AND (FORALL x: m(x) > 0 => member(x, S))
+
+  finite_multisetT: TYPE = (is_finite?)
+
+  % TRS@noetherian also imports TRS@relations_closure (TC, RC, RTC)
+  IMPORTING TRS@noetherian[finite_multisetT]
+
+  empty_msT_is_finite: LEMMA is_finite?(empty_msT)
+
+  domain(m: finite_multisetT): finite_set[T] = { x: T | m(x) > 0 }
+
+  singleton_msT(x: T): finite_multisetT = (LAMBDA y: IF x = y THEN 1 ELSE 0 ENDIF)
+
+  is_singleton?(m: finite_multisetT): bool = EXISTS x: m = singleton_msT(x)
+
+  union_msT_fin_msT_is_fin_msT: LEMMA FORALL(m,n: finite_multisetT) : is_finite?(union_msT(m,n))
+
+  intersection_msT_fin_msT_is_fin_msT: LEMMA FORALL(m,n: finite_multisetT): is_finite?(intersection_msT(m,n))
+
+  % refined version
+  intersection_msT_with_fin_msT_is_fin_msT: LEMMA FORALL(m: finite_multisetT, n: multisetT): is_finite?(intersection_msT(m,n))
+
+  subset_msT_fin_msT_is_fin_msT: LEMMA FORALL(m: multisetT ,n: finite_multisetT): subset_msT?(m,n) IMPLIES is_finite?(m)
+
+  difference_msT_fin_msT_is_fin_msT: LEMMA FORALL(m: finite_multisetT, n:multisetT): is_finite?(difference_msT(m,n))
+
+  singleton_w_rep(x: T, n: nat): finite_multisetT = (LAMBDA y: IF x = y THEN n ELSE 0 ENDIF)
+
+  is_single_element?(m: finite_multisetT): bool = EXISTS (x: T, n: nat): m = singleton_w_rep(x, n)
+
+  subset_msT_subset_dom : LEMMA
+    FORALL (m, n: finite_multisetT): subset_msT?(m,n) IMPLIES subset?(domain(m),domain(n))
+
+  subset_msT_subset_msT_diff_singl : LEMMA FORALL(m:finite_multisetT | NOT m = empty_msT) :
+                                 LET a = choose(domain(m)) IN
+                                   subset_msT?(difference_msT(m,singleton_w_rep(a, m(a))), m) AND
+                                   subset_msT?(difference_msT(m,singleton_msT(a)), m)
+
+  % Removing every copy of a from m removes exactly a from the domain.
+  dom_diff_w_rep : LEMMA FORALL (m: finite_multisetT, a: T):
+    domain(difference_msT(m, singleton_w_rep(a, m(a)))) = remove(a, domain(m))
+
+  card_dom_diff_w_rep : LEMMA FORALL (m: finite_multisetT, a: T): m(a) > 0 IMPLIES
+    card(domain(difference_msT(m, singleton_w_rep(a, m(a))))) = card(domain(m)) - 1
+
+  occurrences(m:finite_multisetT) : RECURSIVE nat =
+      IF m = empty_msT THEN 0
+      ELSE LET a = choose(domain(m)),
+               mp = difference_msT(m,singleton_w_rep(a, m(a))) IN
+           m(a) + occurrences(mp)
+      ENDIF
+  MEASURE card(domain(m))
+
+  % occurrences does not depend on which element is removed first.
+  occ_remove_any : LEMMA FORALL (m: finite_multisetT, a: T): m(a) > 0 IMPLIES
+    occurrences(m) = m(a) + occurrences(difference_msT(m, singleton_w_rep(a, m(a))))
+
+  occ_remove_one : LEMMA FORALL (m: finite_multisetT, a: T): m(a) > 0 IMPLIES
+    occurrences(m) = 1 + occurrences(difference_msT(m, singleton_msT(a)))
+
+  occ_zero_empty_msT : LEMMA FORALL (m: finite_multisetT):
+    occurrences(m) = 0 IMPLIES m = empty_msT
+
+  occ_union_msT : LEMMA FORALL (m, n: finite_multisetT):
+    occurrences(union_msT(m, n)) = occurrences(m) + occurrences(n)
+
+  card_msT(m:finite_multisetT) : RECURSIVE nat =
+      IF m = empty_msT THEN 0
+      ELSE LET a = choose(domain(m)),
+               mp = difference_msT(m,singleton_msT(a)) IN
+           1 + card_msT(mp)
+      ENDIF
+  MEASURE occurrences(m)
+
+  occ_eq_card_msT : LEMMA FORALL(m: finite_multisetT) : occurrences(m) = card_msT(m)
+
+  card_empty_msT : LEMMA card_msT(empty_msT) = 0
+
+  card_singleton_msT : LEMMA card_msT(singleton_msT(x)) = 1
+
+  card_msT_one_char : LEMMA
+    FORALL (m: finite_multisetT): card_msT(m) = 1 IFF is_singleton?(m)
+
+  card_singleton_w_rep : LEMMA FORALL (k: nat): card_msT(singleton_w_rep(x,k)) = k
+
+  card_union_msT : LEMMA
+    FORALL (m, n: finite_multisetT): card_msT(union_msT(m,n)) = card_msT(m) + card_msT(n)
+
+  card_difference_msT : LEMMA
+    FORALL (m, n: finite_multisetT):
+      card_msT(difference_msT(m,n)) = card_msT(m) - card_msT(intersection_msT(m,n))
+
+  singleton_w_rep_1: LEMMA
+    FORALL (x: T): singleton_w_rep(x, 1) = singleton_msT(x)
+
+  union_msT_singleton_w_rep: LEMMA
+    FORALL (x: T, n, m: nat):
+      union_msT(singleton_w_rep(x, n), singleton_w_rep(x, m)) = singleton_w_rep(x, n + m)
+
+  difference_msT_singleton_w_rep: LEMMA
+    FORALL (x: T, n, m: nat):
+      n >= m =>
+        difference_msT(singleton_w_rep(x, n), singleton_w_rep(x, m)) = singleton_w_rep(x, n - m)
+
+  difference_msT_singleton_w_rep_empty_msT: LEMMA
+    FORALL (x: T, n, m: nat):
+      n < m =>
+        difference_msT(singleton_w_rep(x, n), singleton_w_rep(x, m)) = empty_msT
+
+  subset_msT_singleton : LEMMA subset_msT?(m, singleton_msT(x)) IFF m = empty_msT or m = singleton_msT(x)
+
+  subset_msT_singleton_w_rep: LEMMA
+    FORALL (m: finite_multisetT, x: T, n: nat):
+      subset_msT?(m, singleton_w_rep(x, n)) => m = singleton_w_rep(x, m(x)) AND m(x) <= n
+
+  % Multiset ordering definition
+  msT_gt?(m, n: finite_multisetT): bool =
+    EXISTS (X, Y: finite_multisetT):
+      subset_msT?(X, m) AND NOT X = empty_msT AND
+      n = union_msT(difference_msT(m, X), Y) AND
+      (FORALL y: member_msT?(y, Y) => EXISTS x: member_msT?(x, X) AND x > y);
+
+  % Infix notation: m >> n means that n is below m in the multiset ordering
+  >>: MACRO pred[[finite_multisetT, finite_multisetT]] = msT_gt?
+
+  % One-step Multiset ordering definition
+  msT_gt_one?(m, n: finite_multisetT): bool =
+    EXISTS (x: T, Y: finite_multisetT):
+      member_msT?(x, m) AND
+      n = union_msT(difference_msT(m, singleton_msT(x)), Y) AND
+      (FORALL y: member_msT?(y, Y) => x > y)
+
+  msT_gt_one_subset_msT_gt: LEMMA
+    subset?(msT_gt_one?, >>)
+
+  msT_gt_one_subset_tc: LEMMA
+    subset?(TC(msT_gt_one?), >>)
+
+  % Split Y into the elements below a and the rest.
+  msT_below(Y: finite_multisetT, a: T): finite_multisetT =
+    LAMBDA (z: T): IF a > z THEN Y(z) ELSE 0 ENDIF
+
+  msT_above(Y: finite_multisetT, a: T): finite_multisetT =
+    LAMBDA (z: T): IF a > z THEN 0 ELSE Y(z) ENDIF
+
+  % Removing one copy of a and adding the elements of Y below a is one step.
+  msT_gt_one_step : LEMMA
+    FORALL (A, Y: finite_multisetT, a: T): A(a) > 0 IMPLIES
+      msT_gt_one?(A, union_msT(difference_msT(A, singleton_msT(a)), msT_below(Y, a)))
+
+  msT_split_eq : LEMMA
+    FORALL (X, A, Y: finite_multisetT, a: T): subset_msT?(X, A) AND X(a) > 0 IMPLIES
+      union_msT(difference_msT(A, X), Y) =
+        union_msT(difference_msT(union_msT(difference_msT(A, singleton_msT(a)), msT_below(Y, a)),
+                         difference_msT(X, singleton_msT(a))),
+              msT_above(Y, a))
+
+  msT_split_subset_msT : LEMMA
+    FORALL (X, A, Y: finite_multisetT, a: T): subset_msT?(X, A) AND X(a) > 0 IMPLIES
+      subset_msT?(difference_msT(X, singleton_msT(a)),
+             union_msT(difference_msT(A, singleton_msT(a)), msT_below(Y, a)))
+
+  msT_split_dom : LEMMA
+    FORALL (X, Y: finite_multisetT, a: T):
+      (FORALL y: member_msT?(y, Y) => EXISTS x: member_msT?(x, X) AND x > y) IMPLIES
+      (FORALL y: member_msT?(y, msT_above(Y, a)) =>
+         EXISTS x: member_msT?(x, difference_msT(X, singleton_msT(a))) AND x > y)
+
+  msT_split_dom_empty_msT : LEMMA
+    FORALL (X, Y: finite_multisetT, a: T):
+      (FORALL y: member_msT?(y, Y) => EXISTS x: member_msT?(x, X) AND x > y) AND
+      difference_msT(X, singleton_msT(a)) = empty_msT IMPLIES msT_above(Y, a) = empty_msT
+
+  % Generalisation of msT_gt_subset_msT_gt_one_tc, by induction on X.
+  msT_gt_tc_aux : LEMMA
+    FORALL (X, A, B, Y: finite_multisetT):
+      NOT X = empty_msT AND subset_msT?(X, A) AND B = union_msT(difference_msT(A, X), Y) AND
+      (FORALL y: member_msT?(y, Y) => EXISTS x: member_msT?(x, X) AND x > y)
+      IMPLIES TC(msT_gt_one?)(A, B)
+
+  msT_gt_subset_msT_gt_one_tc : COROLLARY
+    subset?(>>, TC(msT_gt_one?))
+
+  msT_gt_equal_msT_gt_one_tc : COROLLARY
+    >> = TC(msT_gt_one?)
+
+  msT_gt_transitive : LEMMA
+     transitive?(>>)
+
+  msT_gt_tc_equivalence: LEMMA
+    subset?(TC(msT_gt_one?), TC(>>))
+
+  msT_gt_one_subset_rtc: LEMMA
+    subset?(RTC(msT_gt_one?), RC(>>))
+
+  msT_gt_union_msT_monotone : LEMMA
+    FORALL(m,n,p:finite_multisetT) :
+      m >> n IMPLIES union_msT(m,p) >> union_msT(n,p)
+
+  msT_gt_empty_msT: LEMMA
+    FORALL (m: finite_multisetT):
+      NOT m = empty_msT => m >> empty_msT
+
+
+  % Subrelations of noetherian relations are noetherian.
+  noetherian_subset: LEMMA
+    FORALL (R1, R2: pred[[finite_multisetT, finite_multisetT]]):
+      subset?(R1, R2) AND noetherian?(R2) IMPLIES noetherian?(R1)
+
+  % Termination of the multiset ordering.
+  % m >> n means that n is below m (>> is a reduction relation),
+  % so well-foundedness is stated for its converse: noetherian?(R) is
+  % defined in TRS@noetherian as well_founded?(converse(R)).
+
+  % Accessible part of msT_gt_one?: M is accessible when all its one-step
+  % successors are. Accessible elements start no infinite msT_gt_one? chain.
+  msT_acc?(M: finite_multisetT): INDUCTIVE bool =
+    FORALL (N: finite_multisetT): msT_gt_one?(M, N) IMPLIES msT_acc?(N)
+
+  % If every finite multiset is accessible, msT_gt_one? is noetherian.
+  msT_acc_noetherian: LEMMA
+    (FORALL (M: finite_multisetT): msT_acc?(M)) IMPLIES noetherian?(msT_gt_one?)
+
+  % Equations on multisets used in the accessibility proof
+  union_msT_singl_diff: LEMMA
+    FORALL (M, Y: finite_multisetT, a: T):
+      union_msT(difference_msT(union_msT(M, singleton_msT(a)), singleton_msT(a)), Y) = union_msT(M, Y)
+
+  union_msT_singl_diff_neq: LEMMA
+    FORALL (M, Y: finite_multisetT, a, b: T): b /= a IMPLIES
+      union_msT(difference_msT(union_msT(M, singleton_msT(a)), singleton_msT(b)), Y) =
+        union_msT(union_msT(difference_msT(M, singleton_msT(b)), Y), singleton_msT(a))
+
+  union_msT_split_one: LEMMA
+    FORALL (M, Y: finite_multisetT, b: T): Y(b) > 0 IMPLIES
+      union_msT(M, Y) = union_msT(union_msT(M, difference_msT(Y, singleton_msT(b))), singleton_msT(b))
+
+  % Adding elements below a preserves accessibility, provided that adding
+  % a single element below a does (induction on the occurrences of Y).
+  msT_acc_add_below: LEMMA
+    FORALL (a: T):
+      (FORALL (b: T, M: finite_multisetT):
+         a > b AND msT_acc?(M) IMPLIES msT_acc?(union_msT(M, singleton_msT(b))))
+      IMPLIES
+      FORALL (Y, M: finite_multisetT):
+        (FORALL y: member_msT?(y, Y) => a > y) AND msT_acc?(M) IMPLIES msT_acc?(union_msT(M, Y))
+
+  % Adding one element preserves accessibility: noetherian induction on a
+  % (the hypothesis on the parameter >), then induction on the
+  % accessibility of M.
+  msT_acc_add: LEMMA
+    FORALL (a: T, M: finite_multisetT):
+      msT_acc?(M) IMPLIES msT_acc?(union_msT(M, singleton_msT(a)))
+
+  msT_acc_all: LEMMA
+    FORALL (M: finite_multisetT): msT_acc?(M)
+
+  msT_gt_one_noetherian: LEMMA
+    noetherian?(msT_gt_one?)
+
+  % Main result: the multiset ordering induced by a noetherian order is
+  % noetherian. Uses >> ⊆ TC(msT_gt_one?) and R_is_Noet_iff_TC_is
+  % (this part does not depend on the transitivity of >).
+  msT_gt_noetherian: THEOREM
+    noetherian?(>>)
+
+  msT_gt_well_founded: COROLLARY
+    well_founded?[finite_multisetT](converse(>>))
+
+END multisetsT
